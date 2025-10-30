@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==== Навигация ====
 // На главную
 function goHome() {
-    location.href = "http://stasssercheff.github.io/shbb/";
+    location.href = "http://stasssercheff.github.io/shbb25/";
 }
 
 // На уровень выше (одну папку вверх)
