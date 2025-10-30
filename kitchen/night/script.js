@@ -196,8 +196,8 @@ if (button) {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     access_key: accessKey,
-                    subject: lang === 'en' ? "LEFTOVER/GIVEN" : "ОСТАТКИ/ВЫСТАЛЕНО",
-                    from_name: "SHBB PASTRY",
+                    subject: lang === 'en' ? "GIVEN" : "ВЫСТАЛЕНО",
+                    from_name: "SHBB NIGHT",
                     reply_to: "no-reply@shbb.com",
                     message: msg
                 })
