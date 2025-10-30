@@ -1,0 +1,81 @@
+/* === Локальные стили для writeoff === */
+
+/* Контейнер этой страницы — оставляем уникальные размеры */
+.container {
+    max-width: 90%;
+    margin: 10px auto; /* уменьшены отступы сверху/снизу */
+    background-color: #fff;
+    padding: 12px; /* уменьшены внутренние отступы */
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+/* Блоки с названием и селектором */
+.dish {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+}
+
+.dish label {
+    flex: 1;
+    font-size: 13px;
+}
+
+.dish select.qty {
+    flex: 0 0 80px;
+    padding: 6px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    text-align: center;
+    text-align-last: center;
+    background: #fff;
+}
+
+/* Поля комментариев */
+textarea.comment {
+    width: 100%;
+    min-height: 60px;
+    font-size: 13px;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+/* Селекторы */
+select {
+    appearance: none;
+    background: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 6px;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+/* Блоки меню */
+.menu-section {
+    margin: 12px 0;
+    padding: 8px;
+    background-color: #f9f7f2;
+    border-radius: 8px;
+}
+
+.section-title {
+    background-color: #e1ded9;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 6px;
+    text-align: center;
+    min-height: 36px;
+    line-height: 36px;
+}
