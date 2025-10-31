@@ -24,6 +24,21 @@
   "en": "To do tomorrow",
   "vi": "Làm ngày mai"
 },
+"trout_slice": {
+  "ru": "Форель с/с нарезать",
+  "en": "Slice salted trout",
+  "vi": "Cắt phi lê cá hồi muối"
+},
+"mussels_prepare": {
+  "ru": "Мидии заготовить",
+  "en": "Prepare mussels",
+  "vi": "Sơ chế nghêu"
+},
+"mussels_sauce": {
+  "ru": "Соус на мидии",
+  "en": "Sauce for mussels",
+  "vi": "Nước sốt cho nghêu"
+},
 "mechua": {
   "ru": "Минь",
   "en": "Me Chua",
