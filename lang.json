@@ -29,9 +29,9 @@
   "en": "To do tomorrow",
   "vi": "Làm ngày mai"
 },
-"trout_slice": {
-  "ru": "Форель с/с нарезать",
-  "en": "Slice salted trout",
+"fish_slice": {
+  "ru": "Рыба с/с нарезать",
+  "en": "Slice salted fish",
   "vi": "Cắt phi lê cá hồi muối"
 },
 "mussels_prepare": {
