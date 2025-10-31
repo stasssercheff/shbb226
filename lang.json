@@ -14,6 +14,11 @@
     "en": "Night shift",
     "vi": "Ca đêm"
 },
+"for_when": {
+  "ru": "На когда",
+  "en": "For when",
+  "vi": "Cho khi nào"
+},
 "do_today": {
   "ru": "Сделать сегодня",
   "en": "To do today",
