@@ -10,7 +10,7 @@ async function loadTranslations() {
     "../../lang.json",
     "../../../lang.json",
     "../../../../lang.json",
-    "../../../../../lang.json"
+    "../../../../../lang.json",
     "../../../../../../lang.json"
   ];
 
