@@ -4,9 +4,14 @@
 
 // ==== Вспомогательные навигационные функции ====
 function goHome() {
-  // оставил поведение как в старой версии
-  location.href = '/index.html';
+  // Определяем базовый путь (первый уровень после домена)
+  const pathParts = window.location.pathname.split("/").filter(Boolean);
+  const basePath = pathParts.length > 0 ? `/${pathParts[0]}/` : "/";
+  
+  // Переход в корень проекта (где index.html)
+  window.location.href = `${window.location.origin}${basePath}index.html`;
 }
+
 
 function goBack() {
   // более аккуратно поднимаемся по пути, как во второй версии
