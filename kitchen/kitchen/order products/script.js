@@ -1,6 +1,6 @@
 // === Навигация ===
 function goHome() {
-  location.href = "http://stasssercheff.github.io/shbb/";
+  location.href = "http://stasssercheff.github.io/shbb25/";
 }
 
 function goBack() {
