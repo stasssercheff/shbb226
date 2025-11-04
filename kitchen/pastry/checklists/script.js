@@ -68,7 +68,7 @@ function restoreFormData() {
   }
 }
 
-// ==== Переключение языка UI (для placeholder / textContent) ====
+// ==== Переключение языка UI ====
 function switchLanguage(lang) {
   document.documentElement.lang = lang;
   localStorage.setItem("lang", lang);
@@ -88,7 +88,6 @@ function switchLanguage(lang) {
     }
   });
 
-  // update select options
   document.querySelectorAll("select").forEach(select => {
     Array.from(select.options).forEach(option => {
       const optKey = option.dataset.i18n || option.dataset.i18nKey || option.dataset.i18nkey;
@@ -140,22 +139,29 @@ function setCurrentDateFull() {
 function buildMessageForLang(lang) {
   const formattedDate = getFormattedDateDM();
 
-  // Дата + Имя
+  // Шапка
   const nameSelect = document.querySelector('select[name="chef"], select#employeeSelect');
   const selectedChef = nameSelect?.options[nameSelect.selectedIndex];
-  let chefName = selectedChef ? (selectedChef.dataset.i18n ? t(selectedChef.dataset.i18n, lang, selectedChef.textContent) : selectedChef.textContent) : "—";
+  const chefName = selectedChef
+    ? (selectedChef.dataset.i18n ? t(selectedChef.dataset.i18n, lang, selectedChef.textContent) : selectedChef.textContent)
+    : "—";
+
+  const checklistSelect = document.querySelector('select[name="checklist_type"], select#checklistType');
+  const checklistKey = checklistSelect?.value || null;
+  const checklistWord = checklistKey ? t(checklistKey, lang, checklistKey) : "";
 
   let message = "";
   message += `📅 ${t("date_label", lang, lang === "en" ? "Date" : "Дата")}: ${formattedDate}\n`;
   message += `${t("chef_label", lang, lang === "en" ? "Name" : "Имя")}: ${chefName}\n`;
+  if (checklistWord) message += `${checklistWord}\n`;
+  message += `\n`;
 
-  // Статус — например, выставлено
-  message += `${t("status_set", lang, lang === "en" ? "Set" : "Выставлено")}\n\n`;
-
-  // Позиции
+  // Позиции — фильтруем шапочные поля
   const dishes = Array.from(document.querySelectorAll(".dish")).filter(dish => {
     const select = dish.querySelector("select.qty");
-    return select && select.value;
+    if (!select || !select.value) return false;
+    const name = select.name || select.id || "";
+    return name !== "chef" && name !== "checklist_type";
   });
 
   dishes.forEach(dish => {
@@ -202,7 +208,6 @@ function initPage() {
   restoreFormData();
   setCurrentDateFull();
 
-  // Кнопка отправки
   const button = document.getElementById("sendToTelegram");
   if (!button) {
     console.warn("Кнопка отправки не найдена: #sendToTelegram");
@@ -211,6 +216,7 @@ function initPage() {
 
   button.addEventListener("click", async () => {
     try {
+      // Языки для отправки берутся из sendConfig.js
       const langsToSend = Array.isArray(window.sendLangs) && window.sendLangs.length ? window.sendLangs : ["ru"];
       for (const lang of langsToSend) {
         const msg = buildMessageForLang(lang);
@@ -226,7 +232,6 @@ function initPage() {
     }
   });
 
-  // События формы
   document.querySelectorAll("select, textarea.comment").forEach(el => {
     el.addEventListener("input", saveFormData);
   });
@@ -241,7 +246,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, 100);
 
-  // Если уже есть
   const dictNow = getTranslationsObject();
   if (dictNow && Object.keys(dictNow).length > 0) {
     clearInterval(waitForTranslations);
