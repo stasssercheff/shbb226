@@ -14,6 +14,23 @@
     "en": "Night shift",
     "vi": "Ca đêm"
 },
+  "cupcake": {
+  "ru": "Капкейк",
+  "en": "Cupcake",
+  "vi": "Bánh cupcake"
+},
+
+"madeleine": {
+  "ru": "Мадлен",
+  "en": "Madeleine",
+  "vi": "Bánh madeleine"
+},
+
+"nuts": {
+  "ru": "Орешки",
+  "en": "Nuts",
+  "vi": "Bánh hạt" 
+},
 "colorant": {
   "ru": "Краситель",
   "en": "Colorant",
