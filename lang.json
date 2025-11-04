@@ -9,6 +9,24 @@
     "en": "Preps",
     "vi": "Chuẩn bị"
   },
+  "given": {
+  "ru": "Отдано",
+  "en": "Given",
+  "vi": "Đã cho"
+},
+
+"wasted": {
+  "ru": "Списано",
+  "en": "Wasted",
+  "vi": "Bị bỏ đi"
+},
+
+"leftovers": {
+  "ru": "Остатки",
+  "en": "Leftovers",
+  "vi": "Đồ thừa"
+},
+
   "night": {
     "ru": "Ночная смена",
     "en": "Night shift",
@@ -315,7 +333,6 @@
   
   
   
-  
   },
   "poppyseed_bun_50%": {
     "ru": "Булка с маком 50%",
@@ -362,6 +379,157 @@
     "en": "Ciabatta 50%",
     "vi": "Bánh mì trắng 50%"
   },
+
+
+
+  "cheesecake": {
+  "ru": "Чизкейк",
+  "en": "Cheesecake",
+  "vi": "Bánh phô mai"
+},
+
+"cheesecake_yesterday": {
+  "ru": "Чизкейк со вчера",
+  "en": "Cheesecake from yesterday",
+  "vi": "Bánh phô mai từ hôm qua"
+},
+
+"honey_cake": {
+  "ru": "Медовик",
+  "en": "Honey cake",
+  "vi": "Bánh mật ong"
+},
+
+"honey_cake_yesterday": {
+  "ru": "Медовик со вчера",
+  "en": "Honey cake from yesterday",
+  "vi": "Bánh mật ong từ hôm qua"
+},
+
+"chocolate_cake": {
+  "ru": "Шоколадный торт",
+  "en": "Chocolate cake",
+  "vi": "Bánh socola"
+},
+
+"chocolate_cake_yesterday": {
+  "ru": "Шоколадный торт со вчера",
+  "en": "Chocolate cake from yesterday",
+  "vi": "Bánh socola từ hôm qua"
+},
+
+"pavlova": {
+  "ru": "Павлова",
+  "en": "Pavlova",
+  "vi": "Pavlova"
+},
+
+"pavlova_yesterday": {
+  "ru": "Павлова со вчера",
+  "en": "Pavlova from yesterday",
+  "vi": "Pavlova từ hôm qua"
+},
+
+"kartoshka": {
+  "ru": "Картошка",
+  "en": "Kartoshka",
+  "vi": "Kartoshka"
+},
+
+"kartoshka_yesterday": {
+  "ru": "Картошка со вчера",
+  "en": "Kartoshka from yesterday",
+  "vi": "Kartoshka từ hôm qua"
+},
+
+"brownie": {
+  "ru": "Брауни",
+  "en": "Brownie",
+  "vi": "Bánh brownie"
+},
+
+"brownie_yesterday": {
+  "ru": "Брауни со вчера",
+  "en": "Brownie from yesterday",
+  "vi": "Bánh brownie từ hôm qua"
+},
+
+"croissant": {
+  "ru": "Круассан",
+  "en": "Croissant",
+  "vi": "Bánh sừng bò"
+},
+
+"croissant_yesterday": {
+  "ru": "Круассан со вчера",
+  "en": "Croissant from yesterday",
+  "vi": "Bánh sừng bò từ hôm qua"
+},
+
+"almond_croissant": {
+  "ru": "Круассан миндальный",
+  "en": "Almond croissant",
+  "vi": "Bánh sừng bò hạnh nhân"
+},
+
+"almond_croissant_yesterday": {
+  "ru": "Круассан миндальный со вчера",
+  "en": "Almond croissant from yesterday",
+  "vi": "Bánh sừng bò hạnh nhân từ hôm qua"
+},
+
+"cookie": {
+  "ru": "Печенье",
+  "en": "Cookie",
+  "vi": "Bánh quy"
+},
+
+"cookie_yesterday": {
+  "ru": "Печенье со вчера",
+  "en": "Cookie from yesterday",
+  "vi": "Bánh quy từ hôm qua"
+},
+
+"apple_pie": {
+  "ru": "Яблочный пирог",
+  "en": "Apple pie",
+  "vi": "Bánh táo"
+},
+
+"apple_pie_yesterday": {
+  "ru": "Яблочный пирог со вчера",
+  "en": "Apple pie from yesterday",
+  "vi": "Bánh táo từ hôm qua"
+},
+
+"cherry_tart": {
+  "ru": "Вишневый тарт",
+  "en": "Cherry tart",
+  "vi": "Bánh tart anh đào"
+},
+
+"cherry_tart_yesterday": {
+  "ru": "Вишневый тарт со вчера",
+  "en": "Cherry tart from yesterday",
+  "vi": "Bánh tart anh đào từ hôm qua"
+},
+  "cupcake_yesterday": {
+  "ru": "Капкейк со вчера",
+  "en": "Cupcake from yesterday",
+  "vi": "Bánh cupcake từ hôm qua"
+},
+
+"madeleine_yesterday": {
+  "ru": "Мадлен со вчера",
+  "en": "Madeleine from yesterday",
+  "vi": "Bánh madeleine từ hôm qua"
+},
+
+"nuts_yesterday": {
+  "ru": "Орешки со вчера",
+  "en": "Nuts from yesterday",
+  "vi": "Bánh hạt từ hôm qua"
+},
 
 
   
