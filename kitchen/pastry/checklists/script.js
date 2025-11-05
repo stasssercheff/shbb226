@@ -1,13 +1,16 @@
 // script.js — рабочая версия (без дублей, общий комментарий)
 
-// ==== Вспомогательные функции ====
+// На главную
 function goHome() {
-  const base = window.location.origin;
-  window.location.href = `${base}/`;
+    location.href = "http://stasssercheff.github.io/shbb25/";
 }
 
+// На уровень выше (одну папку вверх)
 function goBack() {
-  window.history.back();
+    const currentPath = window.location.pathname;
+    const parentPath = currentPath.substring(0, currentPath.lastIndexOf("/"));
+    const upperPath = parentPath.substring(0, parentPath.lastIndexOf("/"));
+    window.location.href = upperPath + "/index.html";
 }
 
 // ==== Переводы ====
