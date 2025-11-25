@@ -3,7 +3,7 @@ let translations = {}; // словарь для i18n
 
 // === Навигация ===
 function goHome() {
-  location.href = "http://stasssercheff.github.io/shbb/";
+  location.href = "http://stasssercheff.github.io/shbb125/";
 }
 
 function goBack() {
