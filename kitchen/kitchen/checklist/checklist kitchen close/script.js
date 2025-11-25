@@ -3,7 +3,7 @@
 
 // === Навигация ===
 window.goHome = function () {
-  window.location.href = "https://stasssercheff.github.io/shbb/";
+  window.location.href = "https://stasssercheff.github.io/shbb125/";
 };
 
 window.goBack = function () {
