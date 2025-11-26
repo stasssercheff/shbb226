@@ -131,7 +131,7 @@ if (button) {
         const lang = document.documentElement.lang || 'ru'; // берем текущий язык
 
         const buildMessage = () => {
-            let message = `🧾 <b>${lang === 'en' ? 'LEFTOVER/GIVEN' : 'ОСТАТКИ/ВЫСТАЛЕНО'}</b>\n\n`;
+            let message = `🧾 <b>${lang === 'en' ? 'LEFTOVER/GIVEN' : 'ОСТАТКИ/ВЫСТАВЛЕНО'}</b>\n\n`;
 
             const today = new Date();
             const day = String(today.getDate()).padStart(2, '0');
