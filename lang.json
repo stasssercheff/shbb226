@@ -2719,11 +2719,19 @@
     "ru": "Максим Р",
     "en": "Maksim R",
     "vi": "Maksim R"
-  },"maks_g": {
+  },
+  "maks_g": {
     "ru": "Максим Ж",
     "en": "Maksim G",
     "vi": "Maksim G"
-  }
+  },"ba": {
+    "ru": "Ба",
+    "en": "Bá",
+    "vi": "Bá"
+  },waiter_1": {
+    "ru": "Официант 1",
+    "en": "Waiter 1",
+    "vi": "Phục vụ 1"
 
 
 
