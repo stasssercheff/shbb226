@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     title: { 
       ru: "Официант 1 этаж открытие. Выполнено из 12:", 
       en: "Waiter open 1st floor. Done form 12:", 
-      vi: "Barista đóng làm được trong 12:" 
+      vi: "Phục vụ mở làm được trong 12:" 
     },
     date: { 
       ru: "Дата", 
