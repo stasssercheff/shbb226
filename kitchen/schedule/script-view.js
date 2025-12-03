@@ -1,6 +1,6 @@
 // На главную
 function goHome() {
-    location.href = "http://stasssercheff.github.io/shbb/";
+    location.href = "http://stasssercheff.github.io/shbb125/";
 }
 
 // На уровень выше (одну папку вверх)
