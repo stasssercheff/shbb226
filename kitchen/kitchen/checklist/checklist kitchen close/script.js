@@ -150,59 +150,48 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   // === Формирование сообщения ===
-  const buildMessage = lang => {
-    const translations = _getTranslations();
-    let message = `🧾 <b>${lang === 'en' ? 'KITCHEN CLOSE' : 'КУХНЯ-ЗАКРЫТИЕ'}</b>\n\n`;
-    message += `📅 ${lang === 'en' ? 'Date' : 'Дата'}: ${formattedDate}\n`;
+ const buildMessage = lang => {
+  const translations = _getTranslations();
+  let msg = `🧾 <b>${lang === 'en' ? 'KITCHEN CLOSE' : 'КУХНЯ-ЗАКРЫТИЕ'}</b>\n\n`;
+  msg += `📅 ${lang === 'en' ? 'Date' : 'Дата'}: ${formattedDate}\n`;
 
-    const nameSelect = document.querySelector('select[name="chef"]');
-    const selectedChef = nameSelect?.options[nameSelect.selectedIndex];
-    let name = '—';
-    if (selectedChef) {
-      const chefKey = selectedChef.dataset.i18n;
-      if (chefKey && translations[chefKey] && translations[chefKey][lang]) {
-        name = translations[chefKey][lang];
-      } else if (selectedChef.textContent && selectedChef.textContent.trim()) {
-        name = selectedChef.textContent.trim();
-      } else if (selectedChef.value && selectedChef.value !== '-') {
-        name = selectedChef.value;
-      }
+  // Имя шефа
+  const chefSelect = document.querySelector('select[name="chef"]');
+  let name = '—';
+  if (chefSelect) {
+    const selected = chefSelect.options[chefSelect.selectedIndex];
+    const key = selected.dataset.i18n;
+    name = (key && translations[key]?.[lang]) || selected.textContent.trim() || selected.value || '—';
+  }
+  msg += `${lang === 'en' ? '👨‍🍳 Name' : '👨‍🍳 Имя'}: ${name}\n\n`;
+
+  // Продукты и числовые поля
+  document.querySelectorAll('.dish').forEach((dish, idx) => {
+    const label = dish.querySelector('label');
+    if (!label) return;
+    const key = label.dataset.i18n;
+    const labelText = (key && translations[key]?.[lang]) || label.textContent.trim() || '—';
+
+    let value = '';
+    const select = dish.querySelector('select.qty');
+    const input = dish.querySelector('input[type="number"].qty');
+
+    if (select && selectHasValue(select)) value = select.value;
+    else if (input && input.value.trim() !== '') value = input.value;
+
+    if (value) {
+      msg += `${idx + 1}. ${labelText}: ${value}\n`;
     }
-    message += `${lang === 'en' ? '👨‍🍳 Name' : '👨‍🍳 Имя'}: ${name}\n\n`;
+  });
 
-    document.querySelectorAll('.checklist-section, .menu-section').forEach(section => {
-      const sectionTitle = section.querySelector('.section-title');
-      const titleKey = sectionTitle?.dataset.i18n;
-      const title = (titleKey && translations[titleKey]?.[lang]) || sectionTitle?.textContent || '';
+  // Комментарий
+  const comment = document.querySelector('textarea.comment');
+  if (comment && comment.value.trim()) {
+    msg += `\n💬 ${lang === 'en' ? 'Comment' : 'Комментарий'}: ${comment.value.trim()}\n`;
+  }
 
-      let sectionContent = '';
-
-      // собираем только выбранные блюда/поля
-      const dishes = Array.from(section.querySelectorAll('.dish')).filter(dish => {
-        const select = dish.querySelector('select.qty');
-        return select && selectHasValue(select);
-      });
-
-      dishes.forEach((dish, idx) => {
-        const label = dish.querySelector('label');
-        const labelKey = label?.dataset.i18n;
-        const labelText = (labelKey && translations[labelKey]?.[lang]) || (label?.textContent || '').trim() || '—';
-        sectionContent += `${idx + 1}. ${labelText}\n`;
-      });
-
-      const commentField = section.querySelector('textarea.comment');
-      if (commentField && commentField.value.trim()) {
-        sectionContent += `💬 ${lang === 'en' ? 'Comment' : 'Комментарий'}: ${commentField.value.trim()}\n`;
-      }
-
-      if (sectionContent.trim()) {
-        // если в секции есть заголовок — печатаем его без эмодзи и без жирного тега (чтобы Telegram отображал аккуратно)
-        message += `${title}\n${sectionContent}\n`;
-      }
-    });
-
-    return message;
-  };
+  return msg;
+};
 
   // === Кнопка отправки (в Telegram) ===
   const button = document.getElementById('sendToTelegram');
