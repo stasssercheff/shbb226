@@ -2,45 +2,50 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Чеклист сухой склад</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="kitchen_close"></title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../../../common.css">
   <link rel="stylesheet" href="style.css">
+
+ <script src="../../../../sendConfig.js" defer></script>
+<script src="../../../../lang.js" defer></script>
+<script src="script.js" defer></script>
 </head>
-<body>
-  <div class="wrapper">
-    <div class="container">
+<body data-profile="kitchen">
 
-      <header class="page-header header-row">
-  <!-- Переключение языка -->
+<header class="page-header">
   <div class="lang-switch">
-    <button onclick="switchLanguage('ru')">RU</button>
-    <button onclick="switchLanguage('en')">EN</button>
+    <button class="lang-btn" data-lang="ru">RU</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="vi">VI</button>
   </div>
-
-  <!-- Навигационные кнопки -->
   <div class="nav-buttons">
-    <button class="nav-btn" onclick="location.href='http://stasssercheff.github.io/shbb/'">На главную</button>
-    <button class="nav-btn" onclick="location.href='../index.html'">Назад</button>
+    <button class="nav-btn" data-i18n="home" onclick="goHome()"></button>
+    <button class="nav-btn" data-i18n="back" onclick="goBack()"></button>
   </div>
 </header>
-      
-      <!-- Дата -->
-      <div class="input-block">
-        <label for="autodate" class="check-label" data-ru="Дата" data-en="Date">Дата</label>
-        <div id="autodate" class="autodate"></div>
-      </div>
 
-      <!-- Имя -->
-      <div class="dish">
-        <label class="check-label" data-ru="Имя" data-en="Name">Имя</label>
-        <select name="chef" class="qty" data-label-ru="Имя" data-label-en="Name">
-          <option value="" data-ru="— Выбрать —" data-en="— Select —">— Выбрать —</option>
-          <option value="Maxim R" data-ru="Максим Р" data-en="Maxim R">Максим Р</option>
-          <option value="Baha" data-ru="Баха" data-en="Baha">Баха</option>
-          <option value="Maxim G" data-ru="Максим Ж" data-en="Maxim G">Максим Ж</option>
-          <option value="Stas" data-ru="Stas" data-en="Stas">Стас</option>
+<main class="main-container">
 
-        </select>
-      </div>
+  <div class="date-container">
+    <span data-i18n="date"></span>:
+    <span id="current-date"></span>
+  </div>
+
+  <h1 data-i18n="kitchen_close"></h1>
+
+  <div class="dish">
+    <label for="employeeSelect" data-i18n="name"></label>
+    <select id="employeeSelect" name="chef" class="qty">
+      <option value="-" selected>-</option>
+      <option value="maksim" data-i18n="maksim"></option>
+      <option value="baha" data-i18n="baha"></option>
+      <option value="ayur" data-i18n="ayur"></option>
+      <option value="stas" data-i18n="stas"></option>
+    </select>
+  </div>   
 
       <!-- Продукты -->
       <div class="dish"><label class="check-label" data-ru="Токпокки(пачка)" data-en="Tteokbokki (pack)">Токпокки(пачка)</label><input type="number" name="Tteokbokki (pack)" class="qty" min="1" max="150" placeholder="Введите число"></div>
@@ -74,19 +79,13 @@
       <div class="dish"><label class="check-label" data-ru="Упаковка сендвич" data-en="Sandwich packaging">Упаковка сендвич</label><input type="number" name="Sandwich packaging" class="qty" min="1" max="150" placeholder="Введите число"></div>
       <div class="dish"><label class="check-label" data-ru="Упаковка скрембл" data-en="Scramble packaging">Упаковка скрембл</label><input type="number" name="Scramble packaging" class="qty" min="1" max="150" placeholder="Введите число"></div>
 
-      <div class="dish">
-        <label class="check-label" data-ru="Комментарий" data-en="Comment">Комментарий</label>
-        <textarea class="comment" rows="3" placeholder="..."></textarea>
-      </div>
+       <!-- Комментарий -->
+    <div class="section-title" data-i18n="comment"></div>
+    <textarea id="comment_fridge" class="comment" rows="3" data-i18n="comment_placeholder"></textarea>
+</section>
 
-      <!-- КНОПКА ОТПРАВКИ -->
-      <div class="submit-block" style="margin-top: 30px;">
-        <button id="sendToTelegram">ОТПРАВИТЬ</button>
-      </div>
 
-    </div> <!-- .container -->
-  </div>   <!-- .wrapper -->
-
-  <script src="script.js"></script>
+<button type="button" id="sendToTelegram" data-i18n="send"></button>
+</main>
 </body>
 </html>
