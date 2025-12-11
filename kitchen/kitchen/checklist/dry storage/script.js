@@ -117,37 +117,48 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.querySelectorAll('select, textarea.comment').forEach(el => el.addEventListener('input', saveFormData));
 
   // === Формирование сообщения ===
-  const buildMessage = lang => {
-    const translations = _getTranslations();
-    let msg = `🧾 <b>${lang === 'en' ? 'KITCHEN CLOSE' : 'КУХНЯ-ЗАКРЫТИЕ'}</b>\n\n`;
-    msg += `📅 ${lang === 'en' ? 'Date' : 'Дата'}: ${formattedDate}\n`;
+ const buildMessage = lang => {
+  const translations = _getTranslations();
+  let msg = `🧾 <b>${lang === 'en' ? 'DRY STORAGE CHECKLIST' : 'ЧEКЛИСТ СУХОЙ СКЛАД'}</b>\n\n`;
+  msg += `📅 ${lang === 'en' ? 'Date' : 'Дата'}: ${formattedDate}\n`;
 
-    const chefSelect = document.querySelector('select[name="chef"]');
-    let name = '—';
-    if (chefSelect) {
-      const selected = chefSelect.options[chefSelect.selectedIndex];
-      const key = selected.dataset.i18n;
-      name = (key && translations[key]?.[lang]) || selected.textContent.trim() || selected.value || '—';
+  // Имя шефа
+  const chefSelect = document.querySelector('select[name="chef"]');
+  let name = '—';
+  if (chefSelect) {
+    const selected = chefSelect.options[chefSelect.selectedIndex];
+    const key = selected.dataset.i18n;
+    name = (key && translations[key]?.[lang]) || selected.textContent.trim() || selected.value || '—';
+  }
+  msg += `${lang === 'en' ? '👨‍🍳 Name' : '👨‍🍳 Имя'}: ${name}\n\n`;
+
+  // Продукты и числовые поля
+  document.querySelectorAll('.dish').forEach((dish, idx) => {
+    const label = dish.querySelector('label');
+    if (!label) return;
+    const key = label.dataset.i18n;
+    const labelText = (key && translations[key]?.[lang]) || label.textContent.trim() || '—';
+
+    let value = '';
+    const select = dish.querySelector('select.qty');
+    const input = dish.querySelector('input[type="number"].qty');
+
+    if (select && selectHasValue(select)) value = select.value;
+    else if (input && input.value.trim() !== '') value = input.value;
+
+    if (value) {
+      msg += `${idx + 1}. ${labelText}: ${value}\n`;
     }
-    msg += `${lang === 'en' ? '👨‍🍳 Name' : '👨‍🍳 Имя'}: ${name}\n\n`;
+  });
 
-    document.querySelectorAll('.dish').forEach((dish, idx) => {
-      const select = dish.querySelector('select.qty');
-      if (!selectHasValue(select)) return;
-      const label = dish.querySelector('label');
-      const key = label?.dataset.i18n;
-      const labelText = (key && translations[key]?.[lang]) || label?.textContent || '—';
-      const val = select.value;
-      msg += `• ${labelText}: ${val}\n`;
-    });
+  // Комментарий
+  const comment = document.querySelector('textarea.comment');
+  if (comment && comment.value.trim()) {
+    msg += `\n💬 ${lang === 'en' ? 'Comment' : 'Комментарий'}: ${comment.value.trim()}\n`;
+  }
 
-    const comment = document.querySelector('textarea.comment');
-    if (comment && comment.value.trim()) {
-      msg += `💬 ${lang === 'en' ? 'Comment' : 'Комментарий'}: ${comment.value.trim()}\n`;
-    }
-
-    return msg;
-  };
+  return msg;
+};
 
   // === Кнопка отправки ===
   const btn = document.getElementById('sendToTelegram');
