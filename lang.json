@@ -2724,7 +2724,8 @@
     "ru": "Максим Ж",
     "en": "Maksim G",
     "vi": "Maksim G"
-  },"ba": {
+  },
+  "ba": {
     "ru": "Ба",
     "en": "Bá",
     "vi": "Bá"
@@ -2738,6 +2739,269 @@
   "ru": "Аюр",
   "en": "Ayur",
   "vi": "Ayur"
-  }
+  },
+  
+  "brioche": {
+    "ru": "Бриош",
+    "en": "Brioche",
+    "vi": "Brioche"
+  },
+  "broccoli": {
+    "ru": "Брокколи",
+    "en": "Broccoli",
+    "vi": "Bông cải xanh"
+  },
+  "ham": {
+    "ru": "Ветчина",
+    "en": "Ham",
+    "vi": "Giăm bông"
+  },
+  "beef_sandwich_450": {
+    "ru": "Говядина сендвич(600)",
+    "en": "Beef sandwich (600)",
+    "vi": "Bánh mì bò (600)"
+  },
+  "beef_sous_vide": {
+    "ru": "Говядина сувид",
+    "en": "Beef sous vide",
+    "vi": "Bò sous vide"
+  },
+  "beef_tartare": {
+    "ru": "Говядина тартар",
+    "en": "Beef tartare",
+    "vi": "Bò tartare"
+  },
+  "draenonfruit": {
+    "ru": "Дренонфрут",
+    "en": "Draenonfruit",
+    "vi": "Draenonfruit"
+  },
+  "shrimp": {
+    "ru": "Креветки",
+    "en": "Shrimp",
+    "vi": "Tôm"
+  },
+  "corn_staff": {
+    "ru": "Кукуруза стафф",
+    "en": "Corn staff",
+    "vi": "Ngô staff"
+  },
+  "kura_rabota": {
+    "ru": "Кура работа",
+    "en": "Chicken work",
+    "vi": "Ga rabota"
+  },
+  "kura_staff": {
+    "ru": "Кура стаф",
+    "en": "Chicken staff",
+    "vi": "Ga staff"
+  },
+  "mango": {
+    "ru": "Манго",
+    "en": "Mango",
+    "vi": "Xoài"
+  },
+  "passion_fruit": {
+    "ru": "Маракуйя",
+    "en": "Passion fruit",
+    "vi": "Chanh dây"
+  },
+  "vegetables_staff": {
+    "ru": "Овощи стаф",
+    "en": "Vegetables staff",
+    "vi": "Rau staff"
+  },
+  "cucumber": {
+    "ru": "Огурец",
+    "en": "Cucumber",
+    "vi": "Dưa leo"
+  },
+  "octopus": {
+    "ru": "Осьминог",
+    "en": "Octopus",
+    "vi": "Bạch tuộc"
+  },
+  "liver_sous_vide": {
+    "ru": "Печень сувид",
+    "en": "Liver sous vide",
+    "vi": "Gan sous vide"
+  },
+  "raw_liver": {
+    "ru": "Печень сырая",
+    "en": "Raw liver",
+    "vi": "Gan sống"
+  },
+  "ratatouille_large": {
+    "ru": "Рататуй большой",
+    "en": "Large ratatouille",
+    "vi": "Ratatouille lớn"
+  },
+  "ratatouille_prc": {
+    "ru": "Рататуй прц.",
+    "en": "Ratatouille prc.",
+    "vi": "Ratatouille prc."
+  },
+  "radish": {
+    "ru": "Редис",
+    "en": "Radish",
+    "vi": "Củ cải"
+  },
+  "riet": {
+    "ru": "Риет",
+    "en": "Riet",
+    "vi": "Riet"
+  },
+  "riet_fish": {
+    "ru": "Рыба на риет",
+    "en": "Riet fish",
+    "vi": "Cá cho riet"
+  },
+  "plaster_fish": {
+    "ru": "Рыба пласт",
+    "en": "Plaster fish",
+    "vi": "Cá lát"
+  },
+  "salted_fish": {
+    "ru": "Рыба соленая",
+    "en": "Salted fish",
+    "vi": "Cá muối"
+  },
+  "steak_fish": {
+    "ru": "Рыба стейк",
+    "en": "Steak fish",
+    "vi": "Cá steak"
+  },
+  "salad_box": {
+    "ru": "Салат(бокс)",
+    "en": "Salad (box)",
+    "vi": "Salad (hộp)"
+  },
+  "pork_staff": {
+    "ru": "Свинина стаф",
+    "en": "Staff pork",
+    "vi": "Thịt heo staff"
+  },
+  "bisque_sauce": {
+    "ru": "Соус биск",
+    "en": "Bisque sauce",
+    "vi": "Nước sốt bisque"
+  },
+  "dutch_sauce": {
+    "ru": "Соус голландский",
+    "en": "Dutch sauce",
+    "vi": "Sốt Hà Lan"
+  },
+  "cream_cheese_sauce": {
+    "ru": "Соус кремчиз",
+    "en": "Cream cheese sauce",
+    "vi": "Sốt kem phô mai"
+  },
+  "chicken_sauce": {
+    "ru": "Соус кура",
+    "en": "Chicken sauce",
+    "vi": "Sốt gà"
+  },
+  "pesto_sauce": {
+    "ru": "Соус песто",
+    "en": "Pesto sauce",
+    "vi": "Sốt pesto"
+  },
+  "fish_sauce": {
+    "ru": "Соус рыба",
+    "en": "Fish sauce",
+    "vi": "Nước mắm"
+  },
+  "tartar_sauce": {
+    "ru": "Соус тартар",
+    "en": "Tartar sauce",
+    "vi": "Sốt tartar"
+  },
+  "dried_tomato_sauce": {
+    "ru": "Соус томат вял",
+    "en": "Dried tomato sauce",
+    "vi": "Sốt cà chua sấy"
+  },
+  "spinach_sauce": {
+    "ru": "Соус Шпинат",
+    "en": "Spinach sauce",
+    "vi": "Sốt rau bina"
+  },
+  "broccoli_soup_large": {
+    "ru": "Суп брокколи большой",
+    "en": "Large broccoli soup",
+    "vi": "Súp bông cải lớn"
+  },
+  "broccoli_soup_prc": {
+    "ru": "Суп брокколи прц",
+    "en": "Prc broccoli soup",
+    "vi": "Súp bông cải prc"
+  },
+  "pumpkin_soup_large": {
+    "ru": "Суп тыква большой",
+    "en": "Large pumpkin soup",
+    "vi": "Súp bí đỏ lớn"
+  },
+  "pumpkin_soup_prc": {
+    "ru": "Суп тыква прц",
+    "en": "Prc pumpkin soup",
+    "vi": "Súp bí đỏ prc"
+  },
+  "mozzarella": {
+    "ru": "Сыр моцарелла",
+    "en": "Mozzarella cheese",
+    "vi": "Phô mai mozzarella"
+  },
+  "parmesan": {
+    "ru": "Сыр пармезан",
+    "en": "Parmesan cheese",
+    "vi": "Phô mai parmesan"
+  },
+  "syrniki": {
+    "ru": "Сырники",
+    "en": "Syrniki",
+    "vi": "Bánh syrniki"
+  },
+  "tofu": {
+    "ru": "Тофу",
+    "en": "Tofu",
+    "vi": "Đậu hũ"
+  },
+  "duck": {
+    "ru": "Утка",
+    "en": "Duck",
+    "vi": "Vịt"
+  },
+  "beans_staff": {
+    "ru": "Фасоль стаф",
+    "en": "Staff beans",
+    "vi": "Đậu staff"
+  },
+  "beans_work": {
+    "ru": "Фасоль(работа)",
+    "en": "Beans (work)",
+    "vi": "Đậu (work)"
+  },
+  "zucchini": {
+    "ru": "Цукини",
+    "en": "Zucchini",
+    "vi": "Bí ngòi"
+  },
+  "cherry_work": {
+    "ru": "Черри работа",
+    "en": "Cherry work",
+    "vi": "Cà chua bi (work)"
+  },
+  "cherry_staff": {
+    "ru": "Черри стаф",
+    "en": "Cherry staff",
+    "vi": "Cà chua bi (staff)"
+  },
+  "garlic_oil": {
+    "ru": "Чеснок масло",
+    "en": "Garlic oil",
+    "vi": "Dầu tỏi"
+
+}
+  
 }
 
