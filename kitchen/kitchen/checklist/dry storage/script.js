@@ -1,194 +1,137 @@
-
-// Функция возврата на главную страницу
-function goHome() {
-    location.href = '/index.html';
-}
-
-// Функция возврата на предыдущую страницу
-function goBack() {
-    history.back();
-}
-
-// === Переключение языка ===
-function switchLanguage(lang) {
-  document.documentElement.lang = lang;
-
-  document.querySelectorAll('.section-title').forEach(title => {
-    if (title.dataset[lang]) title.textContent = title.dataset[lang];
-  });
-
-  document.querySelectorAll('.check-label').forEach(label => {
-    if (label.dataset[lang]) label.textContent = label.dataset[lang];
-  });
-
-  document.querySelectorAll('select').forEach(select => {
-    Array.from(select.options).forEach(option => {
-      if (option.value === '') option.textContent = '—';
-      else if (option.dataset[lang]) option.textContent = option.dataset[lang];
-    });
-  });
-}
-
-// === Сохранение и восстановление данных формы ===
-function saveFormData() {
-  const data = {};
-  document.querySelectorAll('select').forEach(select => {
-    data[select.name || select.id] = select.value;
-  });
-  document.querySelectorAll('textarea.comment').forEach(textarea => {
-    data[textarea.name || textarea.id] = textarea.value;
-  });
-  localStorage.setItem('formData', JSON.stringify(data));
-}
-
-function restoreFormData() {
-  const saved = localStorage.getItem('formData');
-  if (!saved) return;
-  const data = JSON.parse(saved);
-  document.querySelectorAll('select').forEach(select => {
-    if (data[select.name || select.id] !== undefined) select.value = data[select.name || select.id];
-  });
-  document.querySelectorAll('textarea.comment').forEach(textarea => {
-    if (data[textarea.name || textarea.id] !== undefined) textarea.value = data[textarea.name || textarea.id];
-  });
-}
-
-// === DOMContentLoaded ===
+// === script.js ===
 document.addEventListener('DOMContentLoaded', () => {
-  const lang = document.documentElement.lang || 'ru';
+  const chat_id = '-1002393080811';
+  const worker_url = 'https://shbb1.stassser.workers.dev/';
+  const button = document.getElementById('sendBtn');
 
-  // Вставка пустой опции в каждый select.qty
-  document.querySelectorAll('select.qty').forEach(select => {
-    const hasEmpty = Array.from(select.options).some(opt => opt.value === '');
-    if (!hasEmpty) {
-      const emptyOption = document.createElement('option');
-      emptyOption.value = '';
-      emptyOption.dataset.ru = '—';
-      emptyOption.dataset.en = '—';
-      emptyOption.textContent = '—';
-      emptyOption.selected = true;
-      select.insertBefore(emptyOption, select.firstChild);
+  if (!button) return;
+
+  const headerDict = {
+    title: { 
+      ru: "Чеклист сухой склад", 
+      en: "Dry storage checklist", 
+      vi: "Danh sách kho khô" 
+    },
+    date: { 
+      ru: "Дата", 
+      en: "Date", 
+      vi: "Ngày" 
+    },
+    comment: { 
+      ru: "Комментарий", 
+      en: "Comment", 
+      vi: "Ghi chú" 
     }
-  });
+  };
 
-  restoreFormData();
-  switchLanguage(lang);
 
-  const today = new Date();
-  const day = String(today.getDate()).padStart(2, '0');
-  const month = String(today.getMonth() + 1).padStart(2, '0');
-  const formattedDate = `${day}/${month}`;
-  const dateDiv = document.getElementById('autodate');
-  if (dateDiv) dateDiv.textContent = formattedDate;
 
-  document.querySelectorAll('select, textarea.comment').forEach(el => {
-    el.addEventListener('input', saveFormData);
-  });
+  // На главную
+  function goHome() {
+      location.href = "http://stasssercheff.github.io/shbb125/";
+  }
 
-  // === Функция сборки сообщения ===
+  // На уровень выше (одну папку вверх)
+  function goBack() {
+      const currentPath = window.location.pathname;
+      const parentPath = currentPath.substring(0, currentPath.lastIndexOf("/"));
+      const upperPath = parentPath.substring(0, parentPath.lastIndexOf("/"));
+      window.location.href = upperPath + "/index.html";
+  }
+    
+  // Формируем сообщение на конкретном языке
   const buildMessage = (lang) => {
-    let message = `🧾 <b>${lang === 'en' ? 'DRY STORAGE' : 'СУХОЙ СКЛАД'}</b>\n\n`;
-    message += `📅 ${lang === 'en' ? 'Date' : 'Дата'}: ${formattedDate}\n`;
+    const today = new Date();
+    const date = `${String(today.getDate()).padStart(2,'0')}/${String(today.getMonth()+1).padStart(2,'0')}`;
 
-    const nameSelect = document.querySelector('select[name="chef"]');
-    const selectedChef = nameSelect?.options[nameSelect.selectedIndex];
-    const name = selectedChef?.dataset[lang] || '—';
-    message += `${lang === 'en' ? '👨‍🍳 Name' : '👨‍🍳 Имя'}: ${name}\n\n`;
+    let message = `🧾 <b>${headerDict.title[lang] || headerDict.title.ru}</b>\n\n`;
+    message += `📅 ${headerDict.date[lang] || headerDict.date.ru}: ${date}\n`;
 
-    document.querySelectorAll('.menu-section').forEach(section => {
-      const sectionTitle = section.querySelector('.section-title');
-      const title = sectionTitle?.dataset[lang] || '';
-      let sectionContent = '';
+    const chefSelect = document.querySelector('select[name="chef"]');
+    if (chefSelect) {
+      const selectedOption = chefSelect.options[chefSelect.selectedIndex];
+      message += `👤 ${selectedOption.textContent.trim()}\n\n`;
+    }
 
-      section.querySelectorAll('.dish').forEach(dish => {
-        const select = dish.querySelector('select.qty');
-        if (!select || !select.value) return;
+// === 🆕 Добавляем поле "На когда" ===
+const actionSelect = document.querySelector('select[name="actionType"]');
+if (actionSelect) {
+  const selectedAction = actionSelect.options[actionSelect.selectedIndex];
+  const key = selectedAction.dataset.i18n;
+  const translatedAction =
+    key && translations && translations[key] && translations[key][lang]
+      ? translations[key][lang]
+      : selectedAction.textContent.trim();
+  message += `📌 ${translatedAction}\n\n`;
+}
 
-        const label = dish.querySelector('label.check-label');
-        const labelText = select?.dataset[`label${lang.toUpperCase()}`] || label?.dataset[lang] || '—';
-        const selectedOption = select.options[select.selectedIndex];
-        const value = selectedOption?.dataset[lang] || '—';
-        sectionContent += `• ${labelText}: ${value}\n`;
-      });
+   const checklist = document.querySelectorAll('#checklist input[type="checkbox"]');
+let selectedItems = [];
+let counter = 1; // 🆕 счётчик для нумерации
+checklist.forEach((item) => {
+  if (item.checked) {
+    const label = item.closest('.checklist-item')?.querySelector('label');
+    if (label) {
+      const key = label.dataset.i18n;
+      const translated = key && translations && translations[key] && translations[key][lang]
+        ? translations[key][lang]
+        : label.textContent.trim();
+      selectedItems.push(`${counter}. ${translated}`);
+      counter++; // увеличиваем только когда реально добавили
+    }
+  }
+});
 
-      const commentField = section.querySelector('textarea.comment');
-      if (commentField && commentField.value.trim()) {
-        sectionContent += `💬 ${lang === 'en' ? 'Comment' : 'Комментарий'}: ${commentField.value.trim()}\n`;
-      }
 
-      if (sectionContent.trim()) {
-        message += `🔸 <b>${title}</b>\n` + sectionContent + '\n';
-      }
-    });
+    if (selectedItems.length > 0) {
+      message += selectedItems.join('\n');
+    }
+
+    // === 🆕 Добавляем комментарий, если есть ===
+    const commentField = document.querySelector('textarea.comment');
+    if (commentField && commentField.value.trim() !== "") {
+      message += `\n\n💬 ${headerDict.comment[lang] || headerDict.comment.ru}:\n${commentField.value.trim()}`;
+    }
 
     return message;
   };
 
-  // === Кнопка отправки ===
-  const button = document.getElementById('sendToTelegram');
-  button.addEventListener('click', () => {
-    const chat_id = '-1002393080811'; // твой Telegram чат ID
-    const worker_url = 'https://shbb1.stassser.workers.dev/'; // твой Worker
-    const emailTo = 'stassserchef@gmail.com'; // заменишь на нужный адрес
-    const accessKey = "14d92358-9b7a-4e16-b2a7-35e9ed71de43";
+  const sendMessage = async (msg) => {
+    const res = await fetch(worker_url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id, text: msg, parse_mode: "HTML" })
+    });
+    return res.json();
+  };
 
-    // Отправка в Telegram через воркер
-    const sendMessage = (msg) => {
-      return fetch(worker_url, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id, text: msg })
-      }).then(res => res.json());
-    };
+  button.addEventListener('click', async () => {
+    try {
+      const currentProfile = getCurrentProfile();
+      const sendLangs = getSendLanguages(currentProfile);
+      console.log("🌍 Актуальные языки отправки:", sendLangs);
 
-    // Отправка email через Web3Forms
-    const sendEmail = async (msg) => {
-      try {
-        const res = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            access_key: accessKey,
-            subject: "СУХОЙ СКЛАД",
-            from_name: "SHBB KITCHEN",
-            reply_to: "no-reply@shbb.com",
-            message: msg
-          })
-        }).then(r => r.json());
+      if (!sendLangs.length) return alert('⚠ Для текущего профиля нет выбранных языков');
 
-        if (!res.success) alert("Ошибка отправки email. Проверьте форму.");
-      } catch (err) {
-        alert("Ошибка отправки email: " + err.message);
+      let sentCount = 0;
+      for (const lang of sendLangs) {
+        const msg = buildMessage(lang);
+        if (!msg) continue;
+        await sendMessage(msg);
+        sentCount++;
       }
-    };
 
-    const sendAllParts = async (text) => {
-      let start = 0;
-      while (start < text.length) {
-        const chunk = text.slice(start, start + 4000);
-        await sendMessage(chunk);
-       // await sendEmail(chunk); //
-        start += 4000;
+      if (sentCount > 0) {
+        alert(`✅ Отправлено сообщений: ${sentCount} (${sendLangs.join(", ").toUpperCase()})`);
+        document.querySelectorAll('#checklist input[type="checkbox"]').forEach(cb => cb.checked = false);
+        const commentField = document.querySelector('textarea.comment');
+        if (commentField) commentField.value = ""; // 🧹 чистим комментарий
+      } else {
+        alert('⚠ Нет элементов для отправки');
       }
-    };
-
-    const clearForm = () => {
-      document.querySelectorAll('select').forEach(select => select.value = '');
-      document.querySelectorAll('textarea.comment').forEach(textarea => textarea.value = '');
-    };
-
-    (async () => {
-      try {
-        await sendAllParts(buildMessage('ru'));
-        await sendAllParts(buildMessage('en'));
-
-        alert('✅ ОТПРАВЛЕНО');
-        localStorage.clear();
-        clearForm();
-      } catch (err) {
-        alert('❌ Ошибка при отправке: ' + err.message);
-        console.error(err);
-      }
-    })();
+    } catch (err) {
+      console.error(err);
+      alert(`❌ Ошибка: ${err.message}`);
+    }
   });
 });
