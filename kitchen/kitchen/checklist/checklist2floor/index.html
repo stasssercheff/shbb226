@@ -2,321 +2,319 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Чеклист склад 2 этаж</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="kitchen_close"></title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../../../common.css">
   <link rel="stylesheet" href="style.css">
+
+ <script src="../../../../sendConfig.js" defer></script>
+<script src="../../../../lang.js" defer></script>
+<script src="script.js" defer></script>
 </head>
-<body>
-  <div class="wrapper">
-    <div class="container">
+<body data-profile="kitchen">
 
-     <header class="page-header header-row">
-  <!-- Переключение языка -->
+<header class="page-header">
   <div class="lang-switch">
-    <button onclick="switchLanguage('ru')">RU</button>
-    <button onclick="switchLanguage('en')">EN</button>
+    <button class="lang-btn" data-lang="ru">RU</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="vi">VI</button>
   </div>
-
-  <!-- Навигационные кнопки -->
   <div class="nav-buttons">
-    <button class="nav-btn" onclick="location.href='http://stasssercheff.github.io/shbb/'">На главную</button>
-    <button class="nav-btn" onclick="location.href='../index.html'">Назад</button>
+    <button class="nav-btn" data-i18n="home" onclick="goHome()"></button>
+    <button class="nav-btn" data-i18n="back" onclick="goBack()"></button>
   </div>
 </header>
-      
-      <!-- Дата -->
-<div class="input-block">
-  <label for="autodate" class="check-label" data-ru="Дата" data-en="Date">Дата</label>
-  <div id="autodate" class="autodate"></div>
-</div>
 
-      <!-- Имя -->
-      <div class="dish">
-        <label class="check-label" data-ru="Имя" data-en="Name">Имя</label>
-        <select name="chef" class="qty" data-label-ru="Имя" data-label-en="Name">
-          <option value="" data-ru=" — " data-en=" — "> — </option>
-          <option value="Maxim R" data-ru="Максим Р" data-en="Maxim R">Максим Р</option>
-          <option value="Stas" data-ru="Стас" data-en="Stas">Стас</option>
-          <option value="Baha" data-ru="Баха" data-en="Baha">Баха</option>
-          <option value="Maxim G" data-ru="Максим Ж" data-en="Maxim G">Максим Ж</option>
-        </select>
-      </div>
+<main class="main-container">
+
+  <div class="date-container">
+    <span data-i18n="date"></span>:
+    <span id="current-date"></span>
+  </div>
+
+  <h1 data-i18n="kitchen_close"></h1>
+
+  <div class="dish">
+    <label for="employeeSelect" data-i18n="name"></label>
+    <select id="employeeSelect" name="chef" class="qty">
+      <option value="-" selected>-</option>
+      <option value="maks_r" data-i18n="maks_r"></option>
+      <option value="baha" data-i18n="baha"></option>
+      <option value="maks_g" data-i18n="maks_g"></option>
+      <option value="stas" data-i18n="stas"></option>
+    </select>
+  </div>   
 
 <!-- Первый список продуктов -->
 <div class="dish">
-  <label class="check-label" data-ru="Бриош" data-en="Brioche">Бриош</label>
-  <input type="number" name="Brioche" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="brioche">{{ i18n('brioche') }}</label>
+  <input type="number" name="brioche" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Брокколи" data-en="Broccoli">Брокколи</label>
-  <input type="number" name="Broccoli" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="broccoli">{{ i18n('broccoli') }}</label>
+  <input type="number" name="broccoli" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Ветчина" data-en="Ham">Ветчина</label>
-  <input type="number" name="Ham" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="ham">{{ i18n('ham') }}</label>
+  <input type="number" name="ham" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Говядина сендвич(450)" data-en="Beef sandwich (450)">Говядина сендвич(450)</label>
-  <input type="number" name="Beef sandwich (450)" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="beef_sandwich_450">{{ i18n('beef_sandwich_450') }}</label>
+  <input type="number" name="beef_sandwich_450" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Говядина сувид" data-en="Beef sous vide">Говядина сувид</label>
-  <input type="number" name="Beef sous vide" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="beef_sous_vide">{{ i18n('beef_sous_vide') }}</label>
+  <input type="number" name="beef_sous_vide" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Говядина тартар" data-en="Beef tartare">Говядина тартар</label>
-  <input type="number" name="Beef tartare" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="beef_tartare">{{ i18n('beef_tartare') }}</label>
+  <input type="number" name="beef_tartare" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Дренонфрут" data-en="Draenonfruit">Дренонфрут</label>
-  <input type="number" name="Draenonfruit" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="draenonfruit">{{ i18n('draenonfruit') }}</label>
+  <input type="number" name="draenonfruit" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Креветки" data-en="Shrimp">Креветки</label>
-  <input type="number" name="Shrimp" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="shrimp">{{ i18n('shrimp') }}</label>
+  <input type="number" name="shrimp" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Кукуруза стафф" data-en="Corn staff">Кукуруза стафф</label>
-  <input type="number" name="Corn staff" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="corn_staff">{{ i18n('corn_staff') }}</label>
+  <input type="number" name="corn_staff" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Кура работа" data-en="Kura rabota">Кура работа</label>
-  <input type="number" name="Kura rabota" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="kura_rabota">{{ i18n('kura_rabota') }}</label>
+  <input type="number" name="kura_rabota" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Кура стаф" data-en="Kura staff">Кура стаф</label>
-  <input type="number" name="Kura staff" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="kura_staff">{{ i18n('kura_staff') }}</label>
+  <input type="number" name="kura_staff" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Манго" data-en="Mango">Манго</label>
-  <input type="number" name="Mango" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="mango">{{ i18n('mango') }}</label>
+  <input type="number" name="mango" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Маракуйя" data-en="Passion fruit">Маракуйя</label>
-  <input type="number" name="Passion fruit" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="passion_fruit">{{ i18n('passion_fruit') }}</label>
+  <input type="number" name="passion_fruit" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Овощи стаф" data-en="Vegetables staff">Овощи стаф</label>
-  <input type="number" name="Vegetables staff" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="vegetables_staff">{{ i18n('vegetables_staff') }}</label>
+  <input type="number" name="vegetables_staff" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Огурец" data-en="Cucumber">Огурец</label>
-  <input type="number" name="Cucumber" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="cucumber">{{ i18n('cucumber') }}</label>
+  <input type="number" name="cucumber" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Осьминог" data-en="Octopus">Осьминог</label>
-  <input type="number" name="Octopus" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="octopus">{{ i18n('octopus') }}</label>
+  <input type="number" name="octopus" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Печень сувид" data-en="Liver sous vide">Печень сувид</label>
-  <input type="number" name="Liver sous vide" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="liver_sous_vide">{{ i18n('liver_sous_vide') }}</label>
+  <input type="number" name="liver_sous_vide" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Печень сырая" data-en="Raw liver">Печень сырая</label>
-  <input type="number" name="Raw liver" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="raw_liver">{{ i18n('raw_liver') }}</label>
+  <input type="number" name="raw_liver" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Рататуй большой" data-en="Large ratatouille">Рататуй большой</label>
-  <input type="number" name="Large ratatouille" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="ratatouille_large">{{ i18n('ratatouille_large') }}</label>
+  <input type="number" name="ratatouille_large" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Рататуй прц." data-en="Ratatouille prc.">Рататуй прц.</label>
-  <input type="number" name="Ratatouille prc." class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="ratatouille_prc">{{ i18n('ratatouille_prc') }}</label>
+  <input type="number" name="ratatouille_prc" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Редис" data-en="Radish">Редис</label>
-  <input type="number" name="Radish" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="radish">{{ i18n('radish') }}</label>
+  <input type="number" name="radish" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Риет" data-en="Riet">Риет</label>
-  <input type="number" name="Riet" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="riet">{{ i18n('riet') }}</label>
+  <input type="number" name="riet" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Рыба на риет" data-en="Riet fish">Рыба на риет</label>
-  <input type="number" name="Riet fish" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="riet_fish">{{ i18n('riet_fish') }}</label>
+  <input type="number" name="riet_fish" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Рыба пласт" data-en="Plaster fish">Рыба пласт</label>
-  <input type="number" name="Plaster fish" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="plaster_fish">{{ i18n('plaster_fish') }}</label>
+  <input type="number" name="plaster_fish" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Рыба соленая" data-en="Salted fish">Рыба соленая</label>
-  <input type="number" name="Salted fish" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="salted_fish">{{ i18n('salted_fish') }}</label>
+  <input type="number" name="salted_fish" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Рыба стейк" data-en="Steak fish">Рыба стейк</label>
-  <input type="number" name="Steak fish" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="steak_fish">{{ i18n('steak_fish') }}</label>
+  <input type="number" name="steak_fish" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Салат(бокс)" data-en="Salad (box)">Салат(бокс)</label>
-  <input type="number" name="Salad (box)" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="salad_box">{{ i18n('salad_box') }}</label>
+  <input type="number" name="salad_box" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Свинина стаф" data-en="Staff pork">Свинина стаф</label>
-  <input type="number" name="Staff pork" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="pork_staff">{{ i18n('pork_staff') }}</label>
+  <input type="number" name="pork_staff" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Соус биск" data-en="Bisque sauce">Соус биск</label>
-  <input type="number" name="Bisque sauce" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="bisque_sauce">{{ i18n('bisque_sauce') }}</label>
+  <input type="number" name="bisque_sauce" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Соус голландский" data-en="Dutch sauce">Соус голландский</label>
-  <input type="number" name="Dutch sauce" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="dutch_sauce">{{ i18n('dutch_sauce') }}</label>
+  <input type="number" name="dutch_sauce" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Соус кремчиз" data-en="Cream cheese sauce">Соус кремчиз</label>
-  <input type="number" name="Cream cheese sauce" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="cream_cheese_sauce">{{ i18n('cream_cheese_sauce') }}</label>
+  <input type="number" name="cream_cheese_sauce" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Соус кура" data-en="Chicken sauce">Соус кура</label>
-  <input type="number" name="Chicken sauce" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="chicken_sauce">{{ i18n('chicken_sauce') }}</label>
+  <input type="number" name="chicken_sauce" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Соус песто" data-en="Pesto sauce">Соус песто</label>
-  <input type="number" name="Pesto sauce" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="pesto_sauce">{{ i18n('pesto_sauce') }}</label>
+  <input type="number" name="pesto_sauce" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Соус рыба" data-en="Fish sauce">Соус рыба</label>
-  <input type="number" name="Fish sauce" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="fish_sauce">{{ i18n('fish_sauce') }}</label>
+  <input type="number" name="fish_sauce" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Соус тартар" data-en="Tartar sauce">Соус тартар</label>
-  <input type="number" name="Tartar sauce" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="tartar_sauce">{{ i18n('tartar_sauce') }}</label>
+  <input type="number" name="tartar_sauce" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Соус томат вял" data-en="Dried tomato sauce">Соус томат вял</label>
-  <input type="number" name="Dried tomato sauce" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="dried_tomato_sauce">{{ i18n('dried_tomato_sauce') }}</label>
+  <input type="number" name="dried_tomato_sauce" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Соус Шпинат" data-en="Spinach sauce">Соус Шпинат</label>
-  <input type="number" name="Spinach sauce" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="spinach_sauce">{{ i18n('spinach_sauce') }}</label>
+  <input type="number" name="spinach_sauce" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Суп брокколи большой" data-en="Large broccoli soup">Суп брокколи большой</label>
-  <input type="number" name="Large broccoli soup" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="broccoli_soup_large">{{ i18n('broccoli_soup_large') }}</label>
+  <input type="number" name="broccoli_soup_large" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Суп брокколи прц" data-en="Prc broccoli soup">Суп брокколи прц</label>
-  <input type="number" name="Prc broccoli soup" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="broccoli_soup_prc">{{ i18n('broccoli_soup_prc') }}</label>
+  <input type="number" name="broccoli_soup_prc" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Суп тыква большой" data-en="Large pumpkin soup">Суп тыква большой</label>
-  <input type="number" name="Large pumpkin soup" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="pumpkin_soup_large">{{ i18n('pumpkin_soup_large') }}</label>
+  <input type="number" name="pumpkin_soup_large" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Суп тыква прц" data-en="Prc pumpkin soup">Суп тыква прц</label>
-  <input type="number" name="Prc pumpkin soup" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="pumpkin_soup_prc">{{ i18n('pumpkin_soup_prc') }}</label>
+  <input type="number" name="pumpkin_soup_prc" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Сыр моцарелла" data-en="Mozzarella cheese">Сыр моцарелла</label>
-  <input type="number" name="Mozzarella cheese" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="mozzarella">{{ i18n('mozzarella') }}</label>
+  <input type="number" name="mozzarella" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Сыр пармезан" data-en="Parmesan cheese">Сыр пармезан</label>
-  <input type="number" name="Parmesan cheese" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="parmesan">{{ i18n('parmesan') }}</label>
+  <input type="number" name="parmesan" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Сырники" data-en="Syrniki">Сырники</label>
-  <input type="number" name="Syrniki" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="syrniki">{{ i18n('syrniki') }}</label>
+  <input type="number" name="syrniki" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Тофу" data-en="Tofu">Тофу</label>
-  <input type="number" name="Tofu" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="tofu">{{ i18n('tofu') }}</label>
+  <input type="number" name="tofu" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Утка" data-en="Duck">Утка</label>
-  <input type="number" name="Duck" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="duck">{{ i18n('duck') }}</label>
+  <input type="number" name="duck" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Фасоль стаф" data-en="Staff beans">Фасоль стаф</label>
-  <input type="number" name="Staff beans" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="beans_staff">{{ i18n('beans_staff') }}</label>
+  <input type="number" name="beans_staff" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Фасоль(работа)" data-en="Beans (work)">Фасоль(работа)</label>
-  <input type="number" name="Beans (work)" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="beans_work">{{ i18n('beans_work') }}</label>
+  <input type="number" name="beans_work" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Цукини" data-en="Zucchini">Цукини</label>
-  <input type="number" name="Zucchini" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="zucchini">{{ i18n('zucchini') }}</label>
+  <input type="number" name="zucchini" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Черри работа" data-en="Cherry work">Черри работа</label>
-  <input type="number" name="Cherry work" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="cherry_work">{{ i18n('cherry_work') }}</label>
+  <input type="number" name="cherry_work" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Черри стаф" data-en="Cherry staff">Черри стаф</label>
-  <input type="number" name="Cherry staff" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="cherry_staff">{{ i18n('cherry_staff') }}</label>
+  <input type="number" name="cherry_staff" class="qty" min="1" max="150" placeholder="-">
 </div>
 
 <div class="dish">
-  <label class="check-label" data-ru="Чеснок масло" data-en="Garlic oil">Чеснок масло</label>
-  <input type="number" name="Garlic oil" class="qty" min="1" max="150" placeholder="-">
+  <label class="check-label" data-i18="garlic_oil">{{ i18n('garlic_oil') }}</label>
+  <input type="number" name="garlic_oil" class="qty" min="1" max="150" placeholder="-">
 </div>
+ 
+    <!-- Комментарий -->
+    <div class="section-title" data-i18n="comment"></div>
+    <textarea id="comment_fridge" class="comment" rows="3" data-i18n="comment_placeholder"></textarea>
+</section>
 
-  <div class="dish">
-    <label class="check-label" data-ru="Комментарий" data-en="Comment">Комментарий</label>
-    <textarea class="comment" rows="3" placeholder="..."></textarea>
-  </div>
-</div>
 
-
-      <!-- КНОПКА ОТПРАВКИ -->
-      <div class="submit-block" style="margin-top: 30px;">
-        <button id="sendToTelegram">ОТПРАВИТЬ</button>
-      </div>
-
-    </div> <!-- .container -->
-  </div>   <!-- .wrapper -->
-
-  <script src="script.js"></script>
+<button type="button" id="sendToTelegram" data-i18n="send"></button>
+</main>
 </body>
 </html>
