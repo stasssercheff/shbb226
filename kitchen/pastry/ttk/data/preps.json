@@ -599,7 +599,7 @@
     }
   },
     {
-  "name": { "ru": "Клубничный Йогуртовый мусс", "en": "Strawberry Yogurt Mousse" },
+  "name": { "ru": "КЛУБНИЧНЫЙ ЙОГУРТОВЫЙ МУСС", "en": "STRAWBERRY YOGURT MOUSSE" },
   "key": "Количество",
   "ingredients": [
     { "№": 1, "Продукт": "Йогурт", "Ingredient": "Yogurt", "Шт/гр": "150" },
@@ -617,7 +617,7 @@
   }
 },
 {
-  "name": { "ru": "Клубничный Йогуртовый мусс Бисквит", "en": "Strawberry Yogurt Mousse Sponge Cake" },
+  "name": { "ru": "КЛУБНИЧНЫЙ ЙОГУРТОВЫЙ МУСС БИСКВИТ", "en": "STRAWBERRY YOGURT MOUSSE SPONGE CAKE" },
   "key": "Количество",
   "ingredients": [
     { "№": 1, "Продукт": "Яйцо", "Ingredient": "Egg", "Шт/гр": "2" },
@@ -632,7 +632,7 @@
   }
 },
 {
-  "name": { "ru": "Клубничное конфи", "en": "Strawberry Confit" },
+  "name": { "ru": "КЛУБНИЧНОЕ КОНФИ", "en": "STRAWBERRY CONFIT" },
   "key": "Количество",
   "ingredients": [
     { "№": 1, "Продукт": "Клубничное пюре", "Ingredient": "Strawberry puree", "Шт/гр": "70" },
@@ -646,7 +646,7 @@
   }
 },
 {
-  "name": { "ru": "Йогуртовое муссовое пирожное", "en": "Yogurt Mousse Pastry" },
+  "name": { "ru": "ЙОГУРТОВОЕ МУССОВОЕ ПИРОЖНОЕ", "en": "YOGURT MOUSSE PASTRY" },
   "key": "Шт.",
   "ingredients": [
     { "№": 1, "Продукт": "Клубничный Йогуртовый мусс", "Ingredient": "Strawberry Yogurt Mousse", "Шт/гр": "50" },
@@ -660,7 +660,7 @@
   }
 },
 {
-  "name": { "ru": "ПФ Крем капкейк шоко", "en": "Semi-finished Choco Cupcake Cream" },
+  "name": { "ru": "КРЕМ КАПКЕЙК ШОКО", "en": "CHOCO CUPCAKE CREAM" },
   "key": "Количество",
   "ingredients": [
     { "№": 1, "Продукт": "Сливки", "Ingredient": "Cream", "Шт/гр": "280" },
@@ -674,7 +674,7 @@
   }
 },
     {
-  "name": { "ru": "Печенье снежинка", "en": "Snowflake Cookies" },
+  "name": { "ru": "ПЕЧЕНЬЕ СНЕЖИНКА", "en": "SNOWFLAKE COOKIES" },
   "key": "Печенье шт.",
   "ingredients": [
     { "№": 1, "Продукт": "Масло сливочное", "Ingredient": "Butter", "Шт/гр": "200" },
@@ -693,7 +693,7 @@
   }
 },
     {
-  "name": { "ru": "Капкейк голубика", "en": "Blueberry Cupcake" },
+  "name": { "ru": "КАПКЕЙК ГОЛУБИКА", "en": "BLUEBERRY CUPCAKE" },
   "key": "Капкейк шт.",
   "ingredients": [
     { "№": 1, "Продукт": "Соль", "Ingredient": "Salt", "Шт/гр": "1" },
@@ -712,7 +712,6 @@
     "en": "Preheat the oven to 204°C (400°F). This recipe yields approximately 10 cupcakes weighing 66g each (depending on the mold size).\nIn a small bowl, toss the blueberries with flour until evenly coated and place them in the freezer.\nWhisk the dry ingredients together until homogeneous.\nWhisk the liquid ingredients (except blueberries) until homogeneous, add to the flour mixture, and mix until just combined. Do not overmix.\nAdd the floured blueberries and mix the batter until evenly distributed. Distribute the batter among the cupcake molds. Each cavity should be filled three-quarters full (66g).\nBake the cupcakes for 25–30 minutes. They are ready when a toothpick inserted into the center of a cupcake comes out clean without liquid batter.\nLet the cupcakes cool.\nStore the cupcakes in an airtight container at room temperature for up to 1 day or in the refrigerator for up to 3-4 days. Let the cupcakes warm to room temperature before serving. Cupcakes freeze well and can be stored in the freezer for 1 month."
   }
 }
-
 
 
 ]
