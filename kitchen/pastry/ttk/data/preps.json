@@ -445,7 +445,7 @@
     "ru": "ПФ ДИПЛОМАТ", 
     "en": "DIPLOMAT PF" 
   },
-  "key": "Крем шт.",
+  "key": "Итого",
   "ingredients": [
     { "№": 1, "Продукт": "Яйцо (желток)", "Ingredient": "Egg yolk", "Шт/гр": "635" },
     { "№": 2, "Продукт": "Сахар", "Ingredient": "Sugar", "Шт/гр": "82" },
@@ -597,6 +597,123 @@
       "ru": "На подготовленный корж вылить сырную массу, разложить вишню, слегка утопив её в массе. Дать застыть, нанести сверху вишнёвое желе, убрать в холод для застывания. Готовый торт достать из формы, подровнять края, нарезать на 12 частей, каждую часть обернуть ацетатной плёнкой. Хранить без покрытия в холодильнике до 4 дней, в морозильной камере до 2 недель. Полуфабрикат с покрытием — 5 дней в холодильнике.",
       "en": "Pour the cheese mixture onto the prepared base, arrange cherries, slightly pressing them into the mass. Let it set, spread cherry jelly on top, and refrigerate to harden. Remove from mold, trim edges, cut into 12 pieces, wrap each in acetate film. Store uncoated cake in fridge up to 4 days, in freezer up to 2 weeks; semi-finished coated cake — 5 days refrigerated."
     }
+  },
+    {
+  "name": { "ru": "Клубничный Йогуртовый мусс", "en": "Strawberry Yogurt Mousse" },
+  "key": "Количество",
+  "ingredients": [
+    { "№": 1, "Продукт": "Йогурт", "Ingredient": "Yogurt", "Шт/гр": "150" },
+    { "№": 2, "Продукт": "Сахар(пудра)", "Ingredient": "Sugar (powdered)", "Шт/гр": "50" },
+    { "№": 3, "Продукт": "Клубничное пюре", "Ingredient": "Strawberry puree", "Шт/гр": "100" },
+    { "№": 4, "Продукт": "Желатин листовой", "Ingredient": "Gelatin sheets", "Шт/гр": "9" },
+    { "№": 5, "Продукт": "Шоколад белый", "Ingredient": "White chocolate", "Шт/гр": "130" },
+    { "№": 6, "Продукт": "Сливки", "Ingredient": "Cream", "Шт/гр": "150" },
+    { "№": 7, "Продукт": "Соль", "Ingredient": "Salt", "Шт/гр": "1" },
+    { "№": 8, "Продукт": "Количество", "Ingredient": "Amount", "Шт/гр": "590" }
+  ],
+  "process": {
+    "ru": "Кипятим пюре и выливаем на шоколад, и размоченый желатин, размешиваем до однородности. Отставляем и даем остынуть до 30 градусов (комнатной температуры). Сливки взбиваем до мягких пиков (густая сметана, на венчике не остается, но уже схватывается и полосит на поверхности). Смешиваем с йогуртом и смесью шоколада, пюре и желатина.",
+    "en": "Boil the puree and pour over the chocolate and soaked gelatin; mix until homogeneous. Set aside and let cool to 30 degrees (room temperature). Whip the cream to soft peaks (thick sour cream consistency, doesn't stay on the whisk but has set and leaves streaks on the surface). Mix with the yogurt and the chocolate, puree, and gelatin mixture."
   }
+},
+{
+  "name": { "ru": "Клубничный Йогуртовый мусс Бисквит", "en": "Strawberry Yogurt Mousse Sponge Cake" },
+  "key": "Количество",
+  "ingredients": [
+    { "№": 1, "Продукт": "Яйцо", "Ingredient": "Egg", "Шт/гр": "2" },
+    { "№": 2, "Продукт": "Сахар", "Ingredient": "Sugar", "Шт/гр": "75" },
+    { "№": 3, "Продукт": "Мука", "Ingredient": "Flour", "Шт/гр": "75" },
+    { "№": 4, "Продукт": "Масло сливочное", "Ingredient": "Butter", "Шт/гр": "40" },
+    { "№": 5, "Продукт": "Количество", "Ingredient": "Amount", "Шт/гр": "192" }
+  ],
+  "process": {
+    "ru": "Яйца взбить постепенно добавляя сахар до пышной массы. Аккуратно ввести муку. Часть смеси смешать с растопленным маслом комнатной температуры и смешать с основной частью теста. На противне разместить слоем в пол сантиметра Выпекать при 180°C 10-15 минут. Дать остыть и нарезать под форму пирожного.",
+    "en": "Whisk eggs, gradually adding sugar, until a fluffy mixture is formed. Gently fold in the flour. Mix a portion of the batter with the melted butter at room temperature, then combine with the main batter. Spread on a baking sheet in a layer half a centimeter thick. Bake at 180°C for 10-15 minutes. Let cool and cut to the shape of the pastry."
+  }
+},
+{
+  "name": { "ru": "Клубничное конфи", "en": "Strawberry Confit" },
+  "key": "Количество",
+  "ingredients": [
+    { "№": 1, "Продукт": "Клубничное пюре", "Ingredient": "Strawberry puree", "Шт/гр": "70" },
+    { "№": 2, "Продукт": "Сахар", "Ingredient": "Sugar", "Шт/гр": "10" },
+    { "№": 3, "Продукт": "Желатин листовой", "Ingredient": "Gelatin sheets", "Шт/гр": "1" },
+    { "№": 4, "Продукт": "Количество", "Ingredient": "Amount", "Шт/гр": "81" }
+  ],
+  "process": {
+    "ru": "Пюре кипятим с сахаром, добавляем размоченый желатин. Разливаем по полусферкам по 10г, замораживаем минимум 6 часов.",
+    "en": "Boil the puree with sugar, add the soaked gelatin. Pour into hemisphere molds, 10g each, freeze for a minimum of 6 hours."
+  }
+},
+{
+  "name": { "ru": "Йогуртовое муссовое пирожное", "en": "Yogurt Mousse Pastry" },
+  "key": "Шт.",
+  "ingredients": [
+    { "№": 1, "Продукт": "Клубничный Йогуртовый мусс", "Ingredient": "Strawberry Yogurt Mousse", "Шт/гр": "50" },
+    { "№": 2, "Продукт": "Клубничный Йогуртовый мусс Бисквит", "Ingredient": "Strawberry Yogurt Mousse Sponge", "Шт/гр": "10" },
+    { "№": 3, "Продукт": "Клубничное конфи", "Ingredient": "Strawberry Confit", "Шт/гр": "10" },
+    { "№": 4, "Продукт": "Шт.", "Ingredient": "Pcs", "Шт/гр": "1" }
+  ],
+  "process": {
+    "ru": "Мусс заливаем в форму (например, елка) 35г, распределяя так, чтобы и бока до основания были покрыты. Выложить полусферу конфи, прослоить 15 грамм мусса и сверху перекрыть бисквитом.",
+    "en": "Pour 35g of mousse into the mold (e.g., Christmas tree shape), spreading it so that the sides are covered down to the base. Place the confit hemisphere inside, layer with another 15g of mousse, and cover the top with the sponge cake base."
+  }
+},
+{
+  "name": { "ru": "ПФ Крем капкейк шоко", "en": "Semi-finished Choco Cupcake Cream" },
+  "key": "Количество",
+  "ingredients": [
+    { "№": 1, "Продукт": "Сливки", "Ingredient": "Cream", "Шт/гр": "280" },
+    { "№": 2, "Продукт": "Шоколад белый", "Ingredient": "White chocolate", "Шт/гр": "160" },
+    { "№": 3, "Продукт": "Ваниль", "Ingredient": "Vanilla", "Шт/гр": "1" },
+    { "№": 4, "Продукт": "Количество", "Ingredient": "Amount", "Шт/гр": "440" }
+  ],
+  "process": {
+    "ru": "Инструкции по приготовлению не предоставлены.",
+    "en": "Preparation instructions not provided."
+  }
+},
+    {
+  "name": { "ru": "Печенье снежинка", "en": "Snowflake Cookies" },
+  "key": "Печенье шт.",
+  "ingredients": [
+    { "№": 1, "Продукт": "Масло сливочное", "Ingredient": "Butter", "Шт/гр": "200" },
+    { "№": 2, "Продукт": "Специя Масала", "Ingredient": "Masala Spice", "Шт/гр": "5" },
+    { "№": 3, "Продукт": "Ваниль", "Ingredient": "Vanilla", "Шт/гр": "1" },
+    { "№": 4, "Продукт": "Соль", "Ingredient": "Salt", "Шт/гр": "1" },
+    { "№": 5, "Продукт": "Сахар(пудра)", "Ingredient": "Sugar (powdered)", "Шт/гр": "100" },
+    { "№": 6, "Продукт": "Яйцо", "Ingredient": "Egg", "Шт/гр": "1" },
+    { "№": 7, "Продукт": "Мука", "Ingredient": "Flour", "Шт/гр": "300" },
+    { "№": 8, "Продукт": "Пф Соленая карамель", "Ingredient": "Semi-finished Salted Caramel", "Шт/гр": "30" },
+    { "№": 9, "Продукт": "Печенье шт.", "Ingredient": "Pcs", "Шт/гр": "10" }
+  ],
+  "process": {
+    "ru": "Все ингредиенты комнатной температуры. Взбить масло с пудрой до побеления и пышной массы, добавить яичный белок. Затем добавить сухие ингредиенты и объединить до однородной консистенции, не вымешивая долго. Отсадить через кондитерский мешок с круглой насадкой кружочки по 7-10г, выравнивая пальцем хвостики. Выпекать при 180 градусах с конвекцией 15-30 минут (в зависимости от загруженности пароконвектомата) до золотого колера.",
+    "en": "All ingredients should be at room temperature. Beat the butter with the powdered sugar until pale and fluffy; add the egg white. Then add the dry ingredients and combine until a homogeneous consistency is reached, without overmixing. Pipe circles of 7-10g using a piping bag with a round tip, smoothing the tips with a finger. Bake at 180°C with convection for 15-30 minutes (depending on the oven load) until golden."
+  }
+},
+    {
+  "name": { "ru": "Капкейк голубика", "en": "Blueberry Cupcake" },
+  "key": "Капкейк шт.",
+  "ingredients": [
+    { "№": 1, "Продукт": "Соль", "Ingredient": "Salt", "Шт/гр": "1" },
+    { "№": 2, "Продукт": "Сахар", "Ingredient": "Sugar", "Шт/гр": "150" },
+    { "№": 3, "Продукт": "Мука", "Ingredient": "Flour", "Шт/гр": "195" },
+    { "№": 4, "Продукт": "Яйцо(вес)", "Ingredient": "Egg (weight)", "Шт/гр": "50" },
+    { "№": 5, "Продукт": "Масло растительное", "Ingredient": "Vegetable oil", "Шт/гр": "74" },
+    { "№": 6, "Продукт": "Ваниль", "Ingredient": "Vanilla", "Шт/гр": "5" },
+    { "№": 7, "Продукт": "Молоко", "Ingredient": "Milk", "Шт/гр": "80" },
+    { "№": 8, "Продукт": "Разрыхлитель", "Ingredient": "Baking powder", "Шт/гр": "10" },
+    { "№": 9, "Продукт": "Черника С/М", "Ingredient": "Blueberries frozen", "Шт/гр": "150" },
+    { "№": 10, "Продукт": "Шт.", "Ingredient": "Pcs", "Шт/гр": "715" }
+  ],
+  "process": {
+    "ru": "Разогреть духовку до 204 °C. Из этого рецепта получается примерно 10 кексов по 66г (в зависимости от размера формы).\nВ небольшой миске смешать чернику с мукой, чтобы она равномерно покрылась, и положить её в морозилку.\nСухие ингредиенты объединить венчиком до однородной массы.\nЖидкие ингредиенты взбить до однородности (кроме черники), добавить к мучной смеси и перемешать до однородности. Не перемешивать слишком долго.\nДобавить посыпанную мукой чернику и перемешать тесто до однородной массы. Распределить тесто по формочкам для кексов. Каждая полость должна быть заполнена на три четверти (66г).\nВыпекать кексы 25–30 минут. Они готовы, когда зубочистка, воткнутая в центр кекса, выходит без жидкого теста.\nОстудить кексы.\nХранить кексы в герметичном контейнере при комнатной температуре до 1 дня или в холодильнике до 3-4 дней. Дать кексам нагреться до комнатной температуры перед подачей. Кексы хорошо замораживаются и хранятся в морозилке 1 месяц.",
+    "en": "Preheat the oven to 204°C (400°F). This recipe yields approximately 10 cupcakes weighing 66g each (depending on the mold size).\nIn a small bowl, toss the blueberries with flour until evenly coated and place them in the freezer.\nWhisk the dry ingredients together until homogeneous.\nWhisk the liquid ingredients (except blueberries) until homogeneous, add to the flour mixture, and mix until just combined. Do not overmix.\nAdd the floured blueberries and mix the batter until evenly distributed. Distribute the batter among the cupcake molds. Each cavity should be filled three-quarters full (66g).\nBake the cupcakes for 25–30 minutes. They are ready when a toothpick inserted into the center of a cupcake comes out clean without liquid batter.\nLet the cupcakes cool.\nStore the cupcakes in an airtight container at room temperature for up to 1 day or in the refrigerator for up to 3-4 days. Let the cupcakes warm to room temperature before serving. Cupcakes freeze well and can be stored in the freezer for 1 month."
+  }
+}
+
+
+
 ]
 }
