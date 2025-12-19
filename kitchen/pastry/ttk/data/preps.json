@@ -568,15 +568,14 @@
       { "№": 5, "Продукт": "Сахар", "Ingredient": "Sugar", "Шт/гр": "60" },
       { "№": 6, "Продукт": "Яйцо (желток)", "Ingredient": "Egg yolk", "Шт/гр": "80" },
       { "№": 7, "Продукт": "Желатин", "Ingredient": "Gelatin", "Шт/гр": "30" },
-      { "№": 8, "Продукт": "Вода", "Ingredient": "Water", "Шт/гр": "200" },
-      { "№": 9, "Продукт": "Сахар", "Ingredient": "Sugar", "Шт/гр": "40" },
-      { "№": 10, "Продукт": "Соль", "Ingredient": "Salt", "Шт/гр": "2" },
-      { "№": 11, "Продукт": "Масло сливочное", "Ingredient": "Butter", "Шт/гр": "90" },
-      { "№": 12, "Продукт": "Количество", "Ingredient": "Amount", "Шт/гр": "1113" }
+      { "№": 8, "Продукт": "Сахар", "Ingredient": "Sugar", "Шт/гр": "40" },
+      { "№": 9, "Продукт": "Соль", "Ingredient": "Salt", "Шт/гр": "2" },
+      { "№": 10, "Продукт": "Масло сливочное", "Ingredient": "Butter", "Шт/гр": "90" },
+      { "№": 11, "Продукт": "Количество", "Ingredient": "Amount", "Шт/гр": "1113" }
     ],
     "process": {
-      "ru": "Сыры и масло должны быть комнатной температуры. Приготовить соус Англез: соединить сливки, сахар, желтки, ванильный экстракт, пробить блендером, процедить и уварить до 80°C, постоянно помешивая. Сыры соединить и пробить блендером. Желатин замочить, дать набухнуть, слить лишнюю воду. Сахар, соль и сливочное масло соединить до растворения сахара. Все подготовленные ингредиенты объединить, пробить блендером до однородной массы. Вылить в форму, прослоить вишней и охладить минимум 6 часов (лучше на ночь).",
-      "en": "The cheeses and butter should be at room temperature. Prepare Anglaise sauce: combine cream, sugar, yolks, and vanilla extract; blend, strain, and heat to 80°C, stirring constantly. Combine the cheeses and blend. Soak gelatin, let it bloom, drain excess water. Combine sugar, salt, and butter until sugar dissolves. Combine all prepared ingredients, blend until smooth, pour into tart mold, layer with cherries, and chill for at least 6 hours (preferably overnight)."
+      "ru": "Сыры и масло должны быть комнатной температуры. Приготовить соус Англез: соединить сливки, сахар, желтки, ванильный экстракт, пробить блендером, процедить и уварить до 80°C, постоянно помешивая. Сыры соединить и пробить блендером. Желатин замочить воде, дать набухнуть, слить лишнюю воду. Сахар, соль и сливочное масло соединить до растворения сахара. Все подготовленные ингредиенты объединить, пробить блендером до однородной массы. Вылить в форму, прослоить вишней и охладить минимум 6 часов (лучше на ночь).",
+      "en": "The cheeses and butter should be at room temperature. Prepare Anglaise sauce: combine cream, sugar, yolks, and vanilla extract; blend, strain, and heat to 80°C, stirring constantly. Combine the cheeses and blend. Soak gelatin in water, let it bloom, drain excess water. Combine sugar, salt, and butter until sugar dissolves. Combine all prepared ingredients, blend until smooth, pour into tart mold, layer with cherries, and chill for at least 6 hours (preferably overnight)."
     }
   },
   {
