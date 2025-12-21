@@ -41,7 +41,7 @@ async function loadSchedule() {
         if (val === "1") td.classList.add("shift-1");
         if (val === "0") td.classList.add("shift-0");
         if (val === "VR") td.classList.add("shift-VR");
-        if (val === "Б") td.classList.add("shift-Б");
+        if (val === "3") td.classList.add("shift-3");
 
         // Подсветка сегодняшнего дня только в первых 2 строках
         if ((r === 0 || r === 1) && c >= 2 && isToday(val, today)) {
