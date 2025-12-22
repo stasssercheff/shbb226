@@ -30,7 +30,7 @@ function langMap(lang) {
 
 // На главную
 function goHome() {
-    window.location.href = window.location.origin + "/shbb25/";
+    window.location.href = window.location.origin + "/shbb125/";
 }
 
 
