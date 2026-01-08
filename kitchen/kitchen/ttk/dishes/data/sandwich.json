@@ -1,59 +1,79 @@
 [
   {
-    "name": { "ru": "СЕНДВИЧ С ТУНЦОМ", "en": "TUNA SANDWICH" },
+    "name": {
+      "ru": "СЕНДВИЧ С ТУНЦОМ",
+      "en": "TUNA SANDWICH",
+      "vi": "BÁNH MÌ KẸP CÁ NGỪ"
+    },
     "ingredients": [
-      { "ru": "Деревенский хлеб", "en": "Country bread", "amount": "100" },
-      { "ru": "ПФ замес тунец", "en": "Tuna mix", "amount": "120" }
+      { "ru": "Деревенский хлеб", "en": "Country bread", "vi": "Bánh mì quê", "amount": "100" },
+      { "ru": "ПФ замес тунец", "en": "Tuna mix", "vi": "Nhân cá ngừ trộn (sơ chế)", "amount": "120" }
     ],
     "process": {
       "ru": "Предварительно после заморозки нарезаный хлеб достать из морозилки, выложить смесь на один ломтик, накрыть вторым, завернуть в конверт и убрать в бокс. Подписать бокс.",
-      "en": "First, after freezing, take the sliced bread out of the freezer, put the mixture on one slice, cover with a second slice, wrap in an envelope and put in a box. Label the box."
+      "en": "First, after freezing, take the sliced bread out of the freezer, put the mixture on one slice, cover with a second slice, wrap in an envelope and put in a box. Label the box.",
+      "vi": "Lấy bánh mì đã cắt lát ra khỏi tủ đông. Phết nhân cá ngừ lên một lát bánh, phủ lát còn lại. Gói dạng phong bì và cho vào hộp. Dán nhãn hộp."
     },
     "photo": "photos/swtuna.png"
   },
   {
-    "name": { "ru": "СЕНДВИЧ С ФОРЕЛЬЮ", "en": "TROUT SANDWICH" },
+    "name": {
+      "ru": "СЕНДВИЧ С ФОРЕЛЬЮ",
+      "en": "TROUT SANDWICH",
+      "vi": "BÁNH MÌ KẸP CÁ HỒI"
+    },
     "ingredients": [
-      { "ru": "Деревенский хлеб", "en": "Country bread", "amount": "100" },
-      { "ru": "Огурец", "en": "Cucumber", "amount": "50" },
-      { "ru": "ПФ Форель С/С", "en": "Prep Salted trout", "amount": "40" },
-      { "ru": "ПФ кремчиз", "en": "Prep cream cheese", "amount": "35" },
-      { "ru": "ПФ Салат микс", "en": "Salad mix", "amount": "30" }
+      { "ru": "Деревенский хлеб", "en": "Country bread", "vi": "Bánh mì quê", "amount": "100" },
+      { "ru": "Огурец", "en": "Cucumber", "vi": "Dưa leo", "amount": "50" },
+      { "ru": "ПФ Форель С/С", "en": "Prep Salted trout", "vi": "Cá hồi muối (sơ chế)", "amount": "40" },
+      { "ru": "ПФ кремчиз", "en": "Prep cream cheese", "vi": "Kem phô mai (sơ chế)", "amount": "35" },
+      { "ru": "ПФ Салат микс", "en": "Salad mix", "vi": "Salad trộn (sơ chế)", "amount": "30" }
     ],
     "process": {
       "ru": "Предварительно после заморозки нарезаный хлеб достать из морозилки. Смазать оба ломтика с внутренней части кремчизом (размазать ложкой). Выложить лист салата, поверх выложить рыбу. Поверх рыбы выложить слайсы огурца. Накрыть вторым ломтиком хлеба. Завернуть в конверт и убрать в бокс. Подписать бокс.",
-      "en": "First, remove the sliced bread from the freezer after freezing. Grease both slices on the inside with cream cheese (spread with a spoon). Put a leaf of lettuce, put the fish on top. Put cucumber slices on top of the fish. Cover with a second slice of bread. Wrap in an envelope and put in a box. Label the box."
+      "en": "First, remove the sliced bread from the freezer after freezing. Grease both slices on the inside with cream cheese (spread with a spoon). Put a leaf of lettuce, put the fish on top. Put cucumber slices on top of the fish. Cover with a second slice of bread. Wrap in an envelope and put in a box. Label the box.",
+      "vi": "Lấy bánh mì đã cắt lát ra khỏi tủ đông. Phết kem phô mai lên mặt trong của cả hai lát bánh. Đặt lá salad, tiếp đến là cá hồi. Xếp dưa leo cắt lát lên trên. Phủ lát bánh còn lại, gói dạng phong bì và cho vào hộp. Dán nhãn hộp."
     },
     "photo": "photos/swtrout.png"
   },
   {
-    "name": { "ru": "КРУАССАН С ГОЯДИНОЙ", "en": "BEEF CROISSANT" },
+    "name": {
+      "ru": "КРУАССАН С ГОЯДИНОЙ",
+      "en": "BEEF CROISSANT",
+      "vi": "CROISSANT BÒ"
+    },
     "ingredients": [
-      { "ru": "Круассан", "en": "Croissant", "amount": "1" },
-      { "ru": "ПФ Говядина", "en": "Beef", "amount": "25-30" },
-      { "ru": "Огурец", "en": "Cucumber", "amount": "50" },
-      { "ru": "ПФ Салат микс", "en": "Salad mix", "amount": "30" },
-      { "ru": "ПФ соус Тартар", "en": "Tartar sauce", "amount": "30" }
+      { "ru": "Круассан", "en": "Croissant", "vi": "Bánh croissant", "amount": "1" },
+      { "ru": "ПФ Говядина", "en": "Beef", "vi": "Thịt bò (sơ chế)", "amount": "25-30" },
+      { "ru": "Огурец", "en": "Cucumber", "vi": "Dưa leo", "amount": "50" },
+      { "ru": "ПФ Салат микс", "en": "Salad mix", "vi": "Salad trộn (sơ chế)", "amount": "30" },
+      { "ru": "ПФ соус Тартар", "en": "Tartar sauce", "vi": "Sốt tartar (sơ chế)", "amount": "30" }
     ],
     "process": {
       "ru": "Разрезать круассан  на 2 плоские части, смазать обе части внутри соусом. На нижнюю часть выложить листья салата. Огурец порезать на тонкие слайсы, выложить поверх салата. Говядину порезать на тонкие маленькие кусочки, выложить поверх огурца, накрыть вторым ломтиком хлеба. Разрезать по диагонали от угла к углу напополам. Конверт подрезать чтобы скленены были только 2 грани. Завернуть в конверт и убрать в бокс. Подписать бокс.",
-      "en": "Cut the Facaccia into 2 flat parts, grease both parts with sauce inside. Put lettuce leaves on the bottom part. Cut the cucumber into thin slices, put on top of the salad. Cut the beef into thin small pieces, put on top of the cucumber, cover with the second slice of bread. Cut diagonally from corner to corner in half. Trim the envelope so that only 2 edges are glued. Wrap in the envelope and put in the box. Label the box."
+      "en": "Cut the Facaccia into 2 flat parts, grease both parts with sauce inside. Put lettuce leaves on the bottom part. Cut the cucumber into thin slices, put on top of the salad. Cut the beef into thin small pieces, put on top of the cucumber, cover with the second slice of bread. Cut diagonally from corner to corner in half. Trim the envelope so that only 2 edges are glued. Wrap in the envelope and put in the box. Label the box.",
+      "vi": "Cắt croissant làm đôi theo chiều ngang. Phết sốt vào mặt trong hai nửa bánh. Đặt salad ở phần đáy. Cắt dưa leo lát mỏng, xếp lên salad. Cắt thịt bò miếng nhỏ mỏng, đặt lên dưa leo, đậy nửa bánh còn lại. Cắt chéo từ góc này sang góc kia. Cắt bớt giấy gói để chỉ dán 2 cạnh. Gói và cho vào hộp. Dán nhãn hộp."
     },
     "photo": "photos/crbeef.png"
   },
   {
-    "name": { "ru": "СЕНДВИЧ С КУРОЙ(2)", "en": "CHICKEN SANDWICH(2)" },
+    "name": {
+      "ru": "СЕНДВИЧ С КУРОЙ(2)",
+      "en": "CHICKEN SANDWICH(2)",
+      "vi": "BÁNH MÌ KẸP GÀ (2)"
+    },
     "ingredients": [
-      { "ru": "Хлеб тостовый", "en": "Toast bread", "amount": "2 (100)" },
-      { "ru": "ПФ Куриная грудка", "en": "Prep Chicken breast", "amount": "1" },
-      { "ru": "ПФ Салат микс", "en": "Salad mix", "amount": "30" },
-      { "ru": "Огурец", "en": "Cucumber", "amount": "50" },
-      { "ru": "Помидоры Черри темные", "en": "Dark Cherry", "amount": "50" },
-      { "ru": "ПФ Соус Тартар", "en": "Tartar sauce", "amount": "30" }
+      { "ru": "Хлеб тостовый", "en": "Toast bread", "vi": "Bánh mì gối", "amount": "2 (100)" },
+      { "ru": "ПФ Куриная грудка", "en": "Prep Chicken breast", "vi": "Ức gà (sơ chế)", "amount": "1" },
+      { "ru": "ПФ Салат микс", "en": "Salad mix", "vi": "Salad trộn (sơ chế)", "amount": "30" },
+      { "ru": "Огурец", "en": "Cucumber", "vi": "Dưa leo", "amount": "50" },
+      { "ru": "Помидоры Черри темные", "en": "Dark Cherry", "vi": "Cà chua bi đen", "amount": "50" },
+      { "ru": "ПФ Соус Тартар", "en": "Tartar sauce", "vi": "Sốt tartar (sơ chế)", "amount": "30" }
     ],
     "process": {
       "ru": "Смазать оба ломтика внутри соусом. На нижнюю часть выложить листья салата. Огурец порезать на тонкие слайсы, выложить поверх салата. Куру порезать на тонкие 5-6 слайсов под углом, выложить поверх огурца. Томаты Черри подрезать с краев, порезать на 4 кольца каждую, выложить на второй ломтик поверх соуса. Накрыть вторым ломтиком хлеба чтобы томаты были поверх куры. Разрезать по диагонали от угла к углу напополам. Конверт подрезать чтобы скленены были только 2 грани. Завернуть в конверт и убрать в бокс. Подписать бокс.",
-      "en": "Take 2 slices of toast and spread with sauce. Put lettuce leaves on the bottom. Cut cucumber into thin slices, put on top of the salad. Cut chicken into 5-6 thin slices at an angle, put on top of the cucumber. Trim cherry tomatoes from the edges, cut into 4 rings each, put on the second slice on top of the sauce. Cover with a second slice of bread so that the tomatoes are on top of the chicken. Cut diagonally from corner to corner in half. Trim the envelope so that only 2 edges are glued. Wrap in an envelope and put in a box. Label the box."
+      "en": "Take 2 slices of toast and spread with sauce. Put lettuce leaves on the bottom. Cut cucumber into thin slices, put on top of the salad. Cut chicken into 5-6 thin slices at an angle, put on top of the cucumber. Trim cherry tomatoes from the edges, cut into 4 rings each, put on the second slice on top of the sauce. Cover with a second slice of bread so that the tomatoes are on top of the chicken. Cut diagonally from corner to corner in half. Trim the envelope so that only 2 edges are glued. Wrap in an envelope and put in a box. Label the box.",
+      "vi": "Phết sốt vào mặt trong của hai lát bánh mì. Đặt salad ở lớp dưới. Cắt dưa leo lát mỏng, xếp lên salad. Cắt ức gà thành 5–6 lát mỏng xéo, đặt lên dưa leo. Cắt cà chua bi thành 4 khoanh, xếp lên lát bánh thứ hai. Đậy bánh sao cho cà chua nằm trên gà. Cắt chéo làm đôi. Cắt bớt giấy gói để chỉ dán 2 cạnh. Gói và cho vào hộp. Dán nhãn hộp."
     },
     "photo": "photos/swchicken.png"
   }
