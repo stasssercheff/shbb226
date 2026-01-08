@@ -2,151 +2,97 @@
   {
     "name": {
       "ru": "ЯЙЦА БЕНЕДИКТ",
-      "en": "EGGS BENEDICT"
+      "en": "EGGS BENEDICT",
+      "vi": "TRỨNG BENEDICT"
     },
     "ingredients": [
-      { "ru": "ПФ Пашот", "en": "Prep Poached", "amount": "1" },
-      { "ru": "ПФ Соус Тартар", "en": "Tartar sauce", "amount": "40" },
-      { "ru": "ПФ Форель С/С", "en": "Prep Salted trout", "amount": "40" },
-      { "ru": "ПФ Соус Голландский", "en": "Hollandaise sauce", "amount": "50" },
-      { "ru": "ПФ Шпинат", "en": "Prep Spinach", "amount": "40" },
-      { "ru": "Деревенский хлеб", "en": "Country bread", "amount": "70" },
-      { "ru": "Микрозелень", "en": "Microgreens", "amount": "3" },
-      { "ru": "ПФ Салат микс", "en": "Mixed salad", "amount": "30" },
-      { "ru": "ПФ Соус винегрет", "en": "Vinaigrette sauce", "amount": "10" }
+      { "ru": "ПФ Пашот", "en": "Prep Poached", "vi": "Trứng chần (sơ chế)", "amount": "1" },
+      { "ru": "ПФ Соус Тартар", "en": "Tartar sauce", "vi": "Sốt tartar (sơ chế)", "amount": "40" },
+      { "ru": "ПФ Форель С/С", "en": "Prep Salted trout", "vi": "Cá hồi muối (sơ chế)", "amount": "40" },
+      { "ru": "ПФ Соус Голландский", "en": "Hollandaise sauce", "vi": "Sốt Hollandaise (sơ chế)", "amount": "50" },
+      { "ru": "ПФ Шпинат", "en": "Prep Spinach", "vi": "Rau bina (sơ chế)", "amount": "40" },
+      { "ru": "Деревенский хлеб", "en": "Country bread", "vi": "Bánh mì quê", "amount": "70" },
+      { "ru": "Микрозелень", "en": "Microgreens", "vi": "Rau mầm", "amount": "3" },
+      { "ru": "ПФ Салат микс", "en": "Mixed salad", "vi": "Salad trộn (sơ chế)", "amount": "30" },
+      { "ru": "ПФ Соус винегрет", "en": "Vinaigrette sauce", "vi": "Sốt vinaigrette (sơ chế)", "amount": "10" }
     ],
     "process": {
-      "ru": "С краю тарелки выложить пучком ПФ микс салат. Полить Соусим винегрет.Поставить кипятиться сотейник с водой и уксусом для яиц. После закипания убавить огонь на минимум. В воду разбить ПФ Пашот, оставить на 3-4 мин. Ломтики хлеба поставить запекаться на 3-4 мин в духовку.Смазать обе части соусом тартар. Поверх отсадить ПФ шпинат, размазать,Сверху выложить нарезанную Форель СС. Голландский соус поместить в миску и поставить на водяную баню для разогрева.В центр выложить яйцо пашот. Поверх каждого яйца выложить голландский соус. Поверх соуса декорировать микрозеленью.",
-      "en": "Put a saucepan with water for eggs to boil. Break PF Poached Egg into boiling water, turn off heat, leave for 3-4 minutes. Cut bread slices and bake in the oven for 3-4 minutes. Grease both parts with tartar sauce. Put PF spinach on top, spread, Put sliced ​​SS Trout on top. Place Hollandaise sauce in a bowl and put in a water bath to warm up. Put a poached egg in the center. Put Hollandaise sauce on top of each egg. Decorate the sauce with microgreens. Put a bunch of PF mixed salad on the edge of the plate."
+      "ru": "С краю тарелки выложить пучком ПФ микс салат...",
+      "en": "Put a saucepan with water for eggs to boil...",
+      "vi": "Xếp salad trộn (sơ chế) thành bó ở mép đĩa. Đun sôi nước với giấm, hạ lửa nhỏ. Cho trứng chần vào nấu 3–4 phút. Nướng bánh mì 3–4 phút. Phết sốt tartar, thêm rau bina, cá hồi muối. Hâm nóng sốt Hollandaise bằng cách thủy. Đặt trứng vào giữa, phủ sốt và trang trí rau mầm."
     },
     "photo": "photos/benedict.png"
   },
   {
     "name": {
       "ru": "СКРЭМБЛ",
-      "en": "SCRAMBLE"
+      "en": "SCRAMBLE",
+      "vi": "TRỨNG KHUẤY"
     },
     "ingredients": [
-      { "ru": "Яйцо", "en": "Egg", "amount": "2" },
-      { "ru": "Масло сливочное", "en": "Butter", "amount": "5" },
-      { "ru": "Соль", "en": "Salt", "amount": "1" },
-      { "ru": "ПФ Бриош", "en": "Toast bread", "amount": "50" },
-      { "ru": "ПФ Огурец", "en": "Cucumber", "amount": "50" },
-      { "ru": "Помидоры Черри темные", "en": "Dark Cherry", "amount": "40" },
-      { "ru": "ПФ Салат микс", "en": "Mixed Salad", "amount": "40" },
-      { "ru": "ПФ Риет", "en": "Prep trout riet", "amount": "50" },
-      { "ru": "ПФ Соус винегрет", "en": "Vinaigrette sauce", "amount": "10" }
+      { "ru": "Яйцо", "en": "Egg", "vi": "Trứng", "amount": "2" },
+      { "ru": "Масло сливочное", "en": "Butter", "vi": "Bơ", "amount": "5" },
+      { "ru": "Соль", "en": "Salt", "vi": "Muối", "amount": "1" },
+      { "ru": "ПФ Бриош", "en": "Toast bread", "vi": "Bánh brioche (sơ chế)", "amount": "50" },
+      { "ru": "ПФ Огурец", "en": "Cucumber", "vi": "Dưa leo (sơ chế)", "amount": "50" },
+      { "ru": "Помидоры Черри темные", "en": "Dark Cherry", "vi": "Cà chua bi đen", "amount": "40" },
+      { "ru": "ПФ Салат микс", "en": "Mixed Salad", "vi": "Salad trộn (sơ chế)", "amount": "40" },
+      { "ru": "ПФ Риет", "en": "Prep trout riet", "vi": "Pate cá hồi (sơ chế)", "amount": "50" },
+      { "ru": "ПФ Соус винегрет", "en": "Vinaigrette sauce", "vi": "Sốt vinaigrette (sơ chế)", "amount": "10" }
     ],
     "process": {
-      "ru": "Взбить 2 яйца со сливочным маслом (растопленным) и солью. Приготовить скрэмбл (не засушенный) 1 ломтик тостового хлеба разрезать на 2 треугольника, прогреть в духовке до состояния тоста. Салатный лист порвать на небольшие листики, выложить на половину тарелки. Черри нарезать напополам наискосок. Огурец разрезать вдоль напополам, далее каждую половинку порезать на слайсы вдоль всей длины. Выложить огурец и черри на салат, перемешать взрыхлить. Выложить скрэмбл в центр тарелку. Сбоку от скрэмбла как на фото поместить кнелю риета, тостовый хлеб положить углом на скрэмбл.",
-      "en": "Mix 2 eggs with melted butter and salt. Make scrambled eggs (not dried out). Cut 1 slice of toast into 2 triangles and toast in the oven until toasted. Tear the lettuce into small leaves and arrange them on half a plate. Slice the cherry tomatoes in half diagonally. Cut the cucumber in half lengthwise, then slice each half lengthwise. Arrange the cucumber and cherry tomatoes on top of the salad and toss to loosen. Place the scrambled eggs in the center of the plate. Place the quenelles rettes to the side of the scrambled eggs, as shown in the photo. Place the toasted bread at an angle on the scrambled eggs."
+      "ru": "Взбить 2 яйца...",
+      "en": "Mix 2 eggs with melted butter...",
+      "vi": "Đánh 2 trứng với bơ tan chảy và muối. Làm trứng khuấy mềm. Cắt bánh mì thành 2 tam giác và nướng. Xé salad, cắt cà chua và dưa leo, trộn nhẹ. Đặt trứng vào giữa đĩa, thêm pate cá hồi và bánh mì như hình."
     },
     "photo": "photos/scramble.png"
   },
   {
-    "name": { "ru": "ЙОГУРТ БОУЛ", "en": "YOGURT BOWL" },
+    "name": {
+      "ru": "ЙОГУРТ БОУЛ",
+      "en": "YOGURT BOWL",
+      "vi": "BÁT SỮA CHUA"
+    },
     "ingredients": [
-      { "ru": "Йогурт", "en": "Yogurt", "amount": "150" },
-      { "ru": "ПФ Дрэгон фрут", "en": "Dragon fruit", "amount": "50" },
-      { "ru": "Семена тыквы", "en": "Pumpkin seeds", "amount": "20" },
-      { "ru": "Мюсли", "en": "Musly", "amount": "50" },
-      { "ru": "ПФ Манго", "en": "Mango", "amount": "50" },
-      { "ru": "ПФ Клубника", "en": "Strawberry", "amount": "30" },
-      { "ru": "ПФ Мята", "en": "Mint", "amount": "5" },
-      { "ru": "Клубника сублемированная", "en": "Sublemated strawberry", "amount": "5" },
-      { "ru": "Кокосовые чипсы", "en": "Coconut chips", "amount": "5" }
+      { "ru": "Йогурт", "en": "Yogurt", "vi": "Sữa chua", "amount": "150" },
+      { "ru": "ПФ Дрэгон фрут", "en": "Dragon fruit", "vi": "Thanh long (sơ chế)", "amount": "50" },
+      { "ru": "Семена тыквы", "en": "Pumpkin seeds", "vi": "Hạt bí", "amount": "20" },
+      { "ru": "Мюсли", "en": "Musly", "vi": "Ngũ cốc", "amount": "50" },
+      { "ru": "ПФ Манго", "en": "Mango", "vi": "Xoài (sơ chế)", "amount": "50" },
+      { "ru": "ПФ Клубника", "en": "Strawberry", "vi": "Dâu tây (sơ chế)", "amount": "30" },
+      { "ru": "ПФ Мята", "en": "Mint", "vi": "Bạc hà (sơ chế)", "amount": "5" },
+      { "ru": "Клубника сублемированная", "en": "Sublemated strawberry", "vi": "Dâu tây sấy lạnh", "amount": "5" },
+      { "ru": "Кокосовые чипсы", "en": "Coconut chips", "vi": "Dừa sấy", "amount": "5" }
     ],
     "process": {
-      "ru": "Скарю выложить мюсли. Прижимая к мюслям выложить нарезаный кубиком манго и дрегонфрут. Клубнику очистить порезать напополам и наискосок, выложить на фрукты. На пустую область налить йогурт. Поверх мюслей выложить семена тыквы и кокосовые чипсы. Сублемированную клубнику достать из морожзилки, натереть сверху на центр. В центр поместить соцветие мяты.",
-      "en": "Place the granola on a baking sheet. Press the diced mango and dragon fruit into the granola, rinsing and cutting them diagonally. Peel the strawberries, cut them in half and arrange them on top of the fruit. Pour yogurt into the empty space. Place pumpkin seeds and coconut chips on top of the granola. Remove the freeze-dried strawberries from the freezer and grate them onto the center. Place a mint flower in the center."
+      "ru": "Скарю выложить мюсли...",
+      "en": "Place the granola...",
+      "vi": "Cho ngũ cốc vào bát. Thêm xoài và thanh long cắt hạt lựu. Thêm dâu tây. Đổ sữa chua vào phần trống. Rắc hạt bí, dừa sấy. Bào dâu sấy lạnh lên trên và trang trí bạc hà."
     },
     "photo": "photos/bowl.png"
   },
+
   {
-    "name": { "ru": "КРОК МАДАМ", "en": "CROC MADAM" },
+    "name": {
+      "ru": "КРОК МАДАМ",
+      "en": "CROC MADAM",
+      "vi": "CROQUE MADAME"
+    },
     "ingredients": [
-      { "ru": "Бриош квадрат", "en": "Brioche slice", "amount": "2" },
-      { "ru": "Масло сливочное", "en": "Butter", "amount": "40" },
-      { "ru": "Моцарелла", "en": "Mozzarella", "amount": "100" },
-      { "ru": "Окорок", "en": "Ham", "amount": "40" },
-      { "ru": "Соль", "en": "Salt", "amount": "1" },
-      { "ru": "Черри", "en": "Cherry", "amount": "30" },
-      { "ru": "Руккола", "en": "Arugula", "amount": "10" },
-      { "ru": "Яйцо", "en": "Egg", "amount": "1" }
+      { "ru": "Бриош квадрат", "en": "Brioche slice", "vi": "Bánh brioche lát", "amount": "2" },
+      { "ru": "Масло сливочное", "en": "Butter", "vi": "Bơ", "amount": "40" },
+      { "ru": "Моцарелла", "en": "Mozzarella", "vi": "Phô mai mozzarella", "amount": "100" },
+      { "ru": "Окорок", "en": "Ham", "vi": "Giăm bông", "amount": "40" },
+      { "ru": "Соль", "en": "Salt", "vi": "Muối", "amount": "1" },
+      { "ru": "Черри", "en": "Cherry", "vi": "Cà chua bi", "amount": "30" },
+      { "ru": "Руккола", "en": "Arugula", "vi": "Rau rocket", "amount": "10" },
+      { "ru": "Яйцо", "en": "Egg", "vi": "Trứng", "amount": "1" }
     ],
     "process": {
-      "ru": "Два ломтика бриоша смазать маслом с 2х сторон и обжарить с одной , перевернуть покрыть оба сыром и один ветчиной. Посестить оба ломтика на гастроемкость начинкой вверх. поместить на верхнюю полку печи и запека 5–7 мин. На сковородке приготовить глазунью со смещением желтка к краю(чтобы не прорезать при нарезке сендвича), положить сверху на сендвич. Разрезать на два треугольника, выложить с рукколой и черри.",
-      "en": "Butter two slices of brioche on both sides and fry on one. Turn over and cover both with cheese and one with ham. Place both slices in a gastronorm pan, filling side up. Place on the top rack of the oven and bake for 5-7 minutes. Cook the fried egg in a frying pan, pushing the yolk toward the edge (to avoid cutting through when slicing the sandwich). Place on top of the sandwich. Cut into two triangles and top with arugula and cherry tomatoes."
+      "ru": "Два ломтика бриоша...",
+      "en": "Butter two slices of brioche...",
+      "vi": "Phết bơ hai mặt bánh brioche, áp chảo. Phủ phô mai và giăm bông. Nướng 5–7 phút. Chiên trứng ốp la, đặt lên bánh. Cắt tam giác, ăn kèm rocket và cà chua bi."
     },
     "photo": "photos/crock.png"
-  },
-  {
-    "name": { "ru": "ПЕНКЕЙКИ С ФРУКТАМИ", "en": "PANCAKES WITH FRUIT" },
-    "ingredients": [
-      { "ru": "ПФ Тесто пэнкейки", "en": "Prep Pancakes daugh", "amount": "200" },
-      { "ru": "Манго", "en": "Mango", "amount": "70" },
-      { "ru": "Клубника", "en": "Strawberry", "amount": "2-3" },
-      { "ru": "Дрэгон фрут", "en": "Dragon fruit", "amount": "70" },
-      { "ru": "Нутелла", "en": "Nutella", "amount": "50" },
-      { "ru": "Йогурт", "en": "Yogurt", "amount": "50" },
-      { "ru": "Кленовый сироп", "en": "Maple syrup", "amount": "15" },
-      { "ru": "Сахарная пудра", "en": "Powdered sugar", "amount": "1" },
-      { "ru": "Мята", "en": "Mint", "amount": "1" }
-    ],
-    "process": {
-      "ru": "Испечь 2 пэнкейка, выложить друг на друга. Вокруг разместить фрукты. Маракуйю разрезать и поставить на тарелку. Посыпать сахарной пудрой, украсить мятой. Подать с соусниками: кленовый сироп, нутелла, йогурт.",
-      "en": "Bake 2 pancakes, stack them. Arrange fruits around. Cut passion fruit, place on plate. Sprinkle with powdered sugar, garnish with mint. Serve with sauce boats: maple syrup, Nutella, yogurt."
-    },
-    "photo": "photos/pancakes.png"
-  },
-  {
-    "name": { "ru": "СЫРНИКИ", "en": "SYRNIKI" },
-    "ingredients": [
-      { "ru": "ПФ Сырники", "en": "Prep Syrniki", "amount": "150" },
-      { "ru": "Клубника", "en": "Strawberry", "amount": "2-3" },
-      { "ru": "Йогурт", "en": "Yogurt", "amount": "50" },
-      { "ru": "Мед", "en": "Honey", "amount": "30" },
-      { "ru": "ПФ Соус вишневый", "en": "PF Cherry Sauce", "amount": "30" },
-      { "ru": "Мята", "en": "Mint", "amount": "5" },
-      { "ru": "Сахарная пудра", "en": "Powdered sugar", "amount": "1" }
-    ],
-    "process": {
-      "ru": "Сырники прогреть в печи 7 минут (замороженные – 15). Нарезать клубнику. Выложить сырники, посыпать клубникой, украсить мятой и сахарной пудрой. Подать с соусами в соусниках.",
-      "en": "Heat syrniki in oven for 7 minutes (15 if frozen). Cut strawberries. Arrange syrniki, sprinkle with strawberries, garnish with mint and powdered sugar. Serve with sauces."
-    },
-    "photo": "photos/syrniki.png"
-  },
-  {
-    "name": { "ru": "КАША ДРУЖБА", "en": "PORRIDGE DRUZHBA" },
-    "ingredients": [
-      { "ru": "ПФ каша", "en": "Prep kasha", "amount": "300" },
-      { "ru": "Клубника", "en": "Strawberry", "amount": "2-3" },
-      { "ru": "Голубика", "en": "Blueberry", "amount": "5-7" },
-      { "ru": "Мята", "en": "Mint", "amount": "5" }
-    ],
-    "process": {
-      "ru": "Пакет с кашей прогреть в горячей воде. Выложить кашу в тарелку. Нарезать клубнику, добавить с голубикой в центр. Украсить мятой.",
-      "en": "Heat porridge bag in hot water. Place porridge on plate. Cut strawberries, add with blueberries to the center. Garnish with mint."
-    },
-    "photo": "photos/poridge.png"
-  },
-  {
-    "name": { "ru": "ГЛАЗУНЬЯ С РЫБОЙ", "en": "SUNNY FRIED EGG" },
-    "ingredients": [
-      { "ru": "Яйцо", "en": "Egg", "amount": "2" },
-      { "ru": "Белая чиабатта", "en": "White ciabatta", "amount": "20" },
-      { "ru": "ПФ Сыр Кремчиз", "en": "Cream cheese", "amount": "20" },
-      { "ru": "Огурец", "en": "Cucumber", "amount": "30" },
-      { "ru": "Помидоры Черри темные", "en": "Dark Cherry Tomatoes", "amount": "30" },
-      { "ru": "Масло растительное", "en": "Vegetable oil", "amount": "5" },
-      { "ru": "Соль", "en": "Salt", "amount": "1" },
-      { "ru": "Микрозелень", "en": "Microgreens", "amount": "3" },
-      { "ru": "ПФ Форель С/С", "en": "Prep Salted trout", "amount": "40" }
-    ],
-    "process": {
-      "ru": "На сковороде пожарить глазунью из 2 яиц. Чиабатту подсушить, смазать кремчизом. Огурец нарезать эллипсами, черри – дольками. Рыбу и черри выложить волной. На тарелку – рукколу, сверху – глазунью, рядом – гренка с микрозеленью.",
-      "en": "Fry 2 sunny-side-up eggs. Toast ciabatta, spread with cream cheese. Slice cucumber into ovals, cut cherry tomatoes. Arrange trout and cherry wave-like. On plate – arugula, top with fried eggs, serve with ciabatta and microgreens."
-    },
-    "photo": "photos/sunfried eggs.png"
   }
 ]
