@@ -75,7 +75,12 @@
     { "№": 1, "Продукт": "ПФ Сыр Кремчиз", "Ingredient": "Cream cheese", "Ingredient_vi": "Phô mai kem sơ chế", "Шт/гр": "50" },
     { "№": 2, "Продукт": "ПФ вяленые томаты", "Ingredient": "Prep sun-dried tomatoes", "Ingredient_vi": "Cà chua sấy khô sơ chế", "Шт/гр": "5" },
     { "№": 3, "Продукт": "Порций", "Ingredient": "Portions", "Ingredient_vi": "Khẩu phần", "Шт/гр": "1" }
-  
+],
+    "process": {
+        "ru": "Смешать до однородного состояния в миске ложной.",
+        "en": "Mix until smooth in a mixing bowl."
+        "vi": "Trộn đều trong tô cho đến khi hỗn hợp mịn."
+    
   }
     },
     {
