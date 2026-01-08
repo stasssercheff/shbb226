@@ -14,7 +14,32 @@
   "en": "Given",
   "vi": "Đã cho"
 },
-
+{
+  "breakfasts": {
+    "ru": "Завтраки",
+    "en": "Breakfasts",
+    "vi": "Bữa sáng"
+  },
+  "soups": {
+    "ru": "Супы",
+    "en": "Soups",
+    "vi": "Súp"
+  },
+  "salads": {
+    "ru": "Салаты",
+    "en": "Salads",
+    "vi": "Salad"
+  },
+  "main_dishes": {
+    "ru": "Основные блюда",
+    "en": "Main Dishes",
+    "vi": "Món chính"
+  },
+  "sandwiches": {
+    "ru": "Сендвичи",
+    "en": "Sandwiches",
+    "vi": "Bánh mì kẹp"
+  },
 "wasted": {
   "ru": "Списано",
   "en": "Wasted",
