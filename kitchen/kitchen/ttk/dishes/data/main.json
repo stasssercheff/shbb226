@@ -1,124 +1,159 @@
 [
   {
-    "name": { "ru": "Паста с креветками", "en": "Pasta with Shrimps" },
+    "name": {
+      "ru": "Паста с креветками",
+      "en": "Pasta with Shrimps",
+      "vi": "Mì pasta tôm"
+    },
     "ingredients": [
-      { "ru": "Паста (лингвини)", "en": "Pasta (linguine)", "amount": "70" },
-      { "ru": "Креветки", "en": "Shrimp", "amount": "80" },
-      { "ru": "Масло сливочное", "en": "Butter", "amount": "20" },
-      { "ru": "Соль", "en": "Salt", "amount": "3" },
-      { "ru": "Перец", "en": "Pepper", "amount": "1" },
-      { "ru": "Чесночное масло ПФ", "en": "Garlic oil PF", "amount": "10" },
-      { "ru": "Растительное масло", "en": "Vegetable oil", "amount": "10" },
-      { "ru": "Биск ПФ", "en": "Bisque PF", "amount": "80" },
-      { "ru": "Пармезан", "en": "Parmesan", "amount": "30" },
-      { "ru": "Тимьян", "en": "Thyme", "amount": "1" }
+      { "ru": "Паста (лингвини)", "en": "Pasta (linguine)", "vi": "Mì pasta (linguine)", "amount": "70" },
+      { "ru": "Креветки", "en": "Shrimp", "vi": "Tôm", "amount": "80" },
+      { "ru": "Масло сливочное", "en": "Butter", "vi": "Bơ", "amount": "20" },
+      { "ru": "Соль", "en": "Salt", "vi": "Muối", "amount": "3" },
+      { "ru": "Перец", "en": "Pepper", "vi": "Tiêu", "amount": "1" },
+      { "ru": "Чесночное масло ПФ", "en": "Garlic oil PF", "vi": "Dầu tỏi (sơ chế)", "amount": "10" },
+      { "ru": "Растительное масло", "en": "Vegetable oil", "vi": "Dầu thực vật", "amount": "10" },
+      { "ru": "Биск ПФ", "en": "Bisque PF", "vi": "Sốt bisque (sơ chế)", "amount": "80" },
+      { "ru": "Пармезан", "en": "Parmesan", "vi": "Phô mai Parmesan", "amount": "30" },
+      { "ru": "Тимьян", "en": "Thyme", "vi": "Cỏ xạ hương", "amount": "1" }
     ],
     "process": {
-      "ru": "Погрузить пасту в кипящую воду на 12 мин через сетку. Достать креветки на дефрост. На разогретую сковороду налить растительное масло, добавить соль, перец, креветки, жарить, позже влить чесночное масло.  Добавить сливочное масло и биск. Довести соус до однородного густого  состояния. Ввести пасту в соус с малым количеством воды(если соус выпарился сильно). Поместить пасту на тарелку вытянуто по центру тарелки. Посыпать пасту и немного оставшуюсю часть тарелки пармезаном, украсить ветками тимьяна.",
-      "en": "Place the pasta in boiling water through a mesh strainer for 12 minutes. Remove the shrimp and defrost. Pour vegetable oil into a preheated frying pan, add salt, pepper, and shrimp. Fry, then add the garlic oil. Add the butter and bisque. Blend until the sauce is smooth and thick. Stir the pasta into the sauce with a little water (if the sauce has evaporated too much). Place the pasta on a plate, centered. Sprinkle the pasta and the remaining portion of the plate with Parmesan cheese and garnish with thyme sprigs."
+      "ru": "Погрузить пасту в кипящую воду на 12 мин через сетку...",
+      "en": "Place the pasta in boiling water through a mesh strainer for 12 minutes...",
+      "vi": "Luộc mì pasta trong nước sôi 12 phút bằng rổ. Rã đông tôm. Làm nóng chảo với dầu thực vật, thêm muối, tiêu và tôm, áp chảo, sau đó cho dầu tỏi. Thêm bơ và sốt bisque, khuấy đến khi sốt sánh mịn. Cho pasta vào sốt, thêm một ít nước luộc nếu sốt quá đặc. Trình bày pasta ở giữa đĩa. Rắc Parmesan lên pasta và xung quanh đĩa, trang trí bằng cành cỏ xạ hương."
     },
     "photo": "photos/pasta shimps.png"
   },
   {
-    "name": { "ru": "Паста с уткой и горгонзолой", "en": "Duck Pasta with Gorgonzola" },
+    "name": {
+      "ru": "Паста с уткой и горгонзолой",
+      "en": "Duck Pasta with Gorgonzola",
+      "vi": "Mì pasta vịt sốt gorgonzola"
+    },
     "ingredients": [
-      { "ru": "Паста (лингвини)", "en": "Pasta (linguine)", "amount": "70" },
-      { "ru": "ПФ Утка", "en": "PF Duck", "amount": "50" },
-      { "ru": "Сливки", "en": "Cream", "amount": "80" },
-      { "ru": "Горгонзола", "en": "Gorgonzola", "amount": "10" },
-      { "ru": "Соль", "en": "Salt", "amount": "1" },
-      { "ru": "Перец", "en": "Pepper", "amount": "1" },
-      { "ru": "Пармезан", "en": "Parmesan", "amount": "30" },
-      { "ru": "Микрозелень", "en": "Microgreens", "amount": "5" }
+      { "ru": "Паста (лингвини)", "en": "Pasta (linguine)", "vi": "Mì pasta (linguine)", "amount": "70" },
+      { "ru": "ПФ Утка", "en": "PF Duck", "vi": "Vịt (sơ chế)", "amount": "50" },
+      { "ru": "Сливки", "en": "Cream", "vi": "Kem tươi", "amount": "80" },
+      { "ru": "Горгонзола", "en": "Gorgonzola", "vi": "Phô mai Gorgonzola", "amount": "10" },
+      { "ru": "Соль", "en": "Salt", "vi": "Muối", "amount": "1" },
+      { "ru": "Перец", "en": "Pepper", "vi": "Tiêu", "amount": "1" },
+      { "ru": "Пармезан", "en": "Parmesan", "vi": "Phô mai Parmesan", "amount": "30" },
+      { "ru": "Микрозелень", "en": "Microgreens", "vi": "Rau mầm", "amount": "5" }
     ],
     "process": {
-      "ru": "Отварить пасту в кипящей воде в течение 12 минут. На сковороду поместить горгонзолу, ПФ утку, сливки. Разогревать помешивая на медленном огне до однородного состояния. Ввести свареную пасту, перемешать. Поместить пасту на тарелку вытянуто по центру тарелки. Посыпать пасту и немного оставшуюсю часть тарелки пармезаном, украсить микрозеленью.",
-      "en": "Cook the pasta in boiling water for 12 minutes. Place the Gorgonzola, duck breast, and cream in a frying pan. Heat over low heat, stirring occasionally, until smooth. Add the cooked pasta and stir. Place the pasta on a plate, centered. Sprinkle the pasta and the remaining portion of the plate with Parmesan cheese and garnish with microgreens."
+      "ru": "Отварить пасту в кипящей воде...",
+      "en": "Cook the pasta in boiling water for 12 minutes...",
+      "vi": "Luộc pasta trong nước sôi 12 phút. Cho phô mai gorgonzola, vịt sơ chế và kem vào chảo, đun lửa nhỏ khuấy đều đến khi mịn. Cho pasta vào trộn đều. Trình bày pasta ở giữa đĩa, rắc Parmesan và trang trí rau mầm."
     },
     "photo": "photos/pasta duck.png"
   },
   {
-    "name": { "ru": "Рататуй", "en": "Ratatouille" },
+    "name": {
+      "ru": "Рататуй",
+      "en": "Ratatouille",
+      "vi": "Ratatouille"
+    },
     "ingredients": [
-      { "ru": "ПФ Рататуй", "en": "Prep Ratatouille", "amount": "220" },
-      { "ru": "Сыр пармезан", "en": "Parmesan cheese", "amount": "20" },
-      { "ru": "Микрозелень", "en": "Microgreens", "amount": "5" },
-      { "ru": "Бородинский (гренки)", "en": "Borodinsky (croutons)", "amount": "4" }
+      { "ru": "ПФ Рататуй", "en": "Prep Ratatouille", "vi": "Ratatouille (sơ chế)", "amount": "220" },
+      { "ru": "Сыр пармезан", "en": "Parmesan cheese", "vi": "Phô mai Parmesan", "amount": "20" },
+      { "ru": "Микрозелень", "en": "Microgreens", "vi": "Rau mầm", "amount": "5" },
+      { "ru": "Бородинский (гренки)", "en": "Borodinsky (croutons)", "vi": "Bánh mì Borodinsky (bánh nướng)", "amount": "4" }
     ],
     "process": {
-      "ru": "Размороженый пакет с рартатуем поместить в негорячую воду на 3-5 минут. После процедить через сито от лишней жидкости и выложить в тарелку через большое кольцо(10 см), снять кольцо. С одной стороны по борту тарелки выложить 4 гренки веером. Обильно посыпать пармезаном поверх рататуя и расплавить горелкой пармезан до образования корочки. Немного присыпать оставшуюся часть тарелки + гренки. Украсить рататуй в центре микрозеленью.",
-      "en": "Place the defrosted bag of rartatouille in lukewarm water for 3-5 minutes. Then strain the excess liquid through a sieve and place it on a plate through a large (10 cm) ring; remove the ring. Arrange 4 croutons in a fan shape along one side of the plate. Sprinkle Parmesan generously over the ratatouille and melt it with a blowtorch until a crust forms. Sprinkle a little more on the rest of the plate and croutons. Garnish the center of the ratatouille with microgreens."
+      "ru": "Размороженый пакет с рартатуем...",
+      "en": "Place the defrosted bag of rartatouille...",
+      "vi": "Ngâm túi ratatouille đã rã đông trong nước ấm 3–5 phút. Để ráo nước, cho vào đĩa qua khuôn tròn lớn (10 cm), sau đó nhấc khuôn. Xếp 4 bánh nướng hình quạt dọc viền đĩa. Rắc nhiều Parmesan lên ratatouille và khò đến khi tạo lớp vỏ. Rắc nhẹ phần đĩa còn lại và bánh nướng. Trang trí rau mầm ở trung tâm."
     },
     "photo": "photos/retatoulle.png"
   },
   {
-    "name": { "ru": "Куриная грудка гриль", "en": "Grilled Chicken Breast" },
+    "name": {
+      "ru": "Куриная грудка гриль",
+      "en": "Grilled Chicken Breast",
+      "vi": "Ức gà nướng"
+    },
     "ingredients": [
-      { "ru": "ПФ Куриная грудка", "en": "Prep Chicken breast", "amount": "135" },
-      { "ru": "ПФ Цукини", "en": "Zucchini", "amount": "100" },
-      { "ru": "ПФ Перец болгарский", "en": "PF Bell pepper", "amount": "50" },
-      { "ru": "Черри темные", "en": "Dark cherry tomatoes", "amount": "40" },
-      { "ru": "ПФ Соус из перца", "en": "PF Pepper sauce", "amount": "50" },
-      { "ru": "Масло растительное", "en": "Vegetable oil", "amount": "10" },
-      { "ru": "ПФ Чесночное масло", "en": "PF Garlic oil", "amount": "5" },
-      { "ru": "Соль", "en": "Salt", "amount": "2" },
-      { "ru": "Перец черный молотый", "en": "Ground black pepper", "amount": "1" }
+      { "ru": "ПФ Куриная грудка", "en": "Prep Chicken breast", "vi": "Ức gà (sơ chế)", "amount": "135" },
+      { "ru": "ПФ Цукини", "en": "Zucchini", "vi": "Bí ngòi (sơ chế)", "amount": "100" },
+      { "ru": "ПФ Перец болгарский", "en": "PF Bell pepper", "vi": "Ớt chuông (sơ chế)", "amount": "50" },
+      { "ru": "Черри темные", "en": "Dark cherry tomatoes", "vi": "Cà chua bi đen", "amount": "40" },
+      { "ru": "ПФ Соус из перца", "en": "PF Pepper sauce", "vi": "Sốt ớt chuông (sơ chế)", "amount": "50" },
+      { "ru": "Масло растительное", "en": "Vegetable oil", "vi": "Dầu thực vật", "amount": "10" },
+      { "ru": "ПФ Чесночное масло", "en": "PF Garlic oil", "vi": "Dầu tỏi (sơ chế)", "amount": "5" },
+      { "ru": "Соль", "en": "Salt", "vi": "Muối", "amount": "2" },
+      { "ru": "Перец черный молотый", "en": "Ground black pepper", "vi": "Tiêu đen xay", "amount": "1" }
     ],
     "process": {
-      "ru": "Разогреть сковороду гриль. Цуккини и перец нарезанные на 4 пластинки и томат замешать с чесночным маслом и солью.  Овощи колировать на сковороде гриль, далее отправить допекаться в духовке. Грудку пометстить в горячую воду на 1-2 мин., далее извлечь из пакета, протереть обвалять в миске от овощей колировать на разогретой сковороде гриль по 1-1,5 мин с каждой стороны. В средний соусник отсадить разогретый соус.  Выложить цукини веяром по краю тарелки, ближе к центру так же веяром выложить перец. Грудку нарезать на 4-5 слайсов наискосок поперек длины. Сбоку от овощей вдоль тарелки выложить курицу. Между курой и перцем выложить черри.  Поставить в тарелку соус. Украсить подпаленой веткой розмарина.",
-      "en": "Heat a grill pan. Toss the zucchini and pepper, quartered, and tomato with garlic oil and salt. Roast the vegetables in the grill pan, then finish roasting in the oven. Dip the chicken breast in hot water for 1-2 minutes, then remove from the bag, pat dry, and roll in a bowl to remove the vegetables. Roast in the preheated grill pan for 1-1.5 minutes per side. Pour the heated sauce into a medium gravy boat. Arrange the zucchini fanned around the edge of the plate, and fan the peppers closer to the center. Slice the chicken breast diagonally across the length of the chicken into 4-5 slices. Arrange the chicken along the side of the vegetables. Place cherry tomatoes between the chicken and the peppers. Serve the sauce on the plate. Garnish with a charred rosemary sprig."
+      "ru": "Разогреть сковороду гриль...",
+      "en": "Heat a grill pan...",
+      "vi": "Làm nóng chảo grill. Trộn bí ngòi, ớt chuông và cà chua với dầu tỏi và muối. Áp chảo rau trên chảo grill rồi hoàn thiện trong lò. Làm nóng ức gà trong nước nóng 1–2 phút, lấy ra khỏi túi, thấm khô và áp chảo grill mỗi mặt 1–1,5 phút. Cho sốt đã làm nóng vào chén. Xếp bí ngòi và ớt chuông hình quạt, đặt gà cắt lát chéo bên cạnh, xen cà chua bi. Trang trí bằng nhánh hương thảo khò."
     },
     "photo": "photos/chicken.png"
   },
   {
-    "name": { "ru": "Стейк форели", "en": "Trout Steak" },
+    "name": {
+      "ru": "Стейк форели",
+      "en": "Trout Steak",
+      "vi": "Cá hồi vân steak"
+    },
     "ingredients": [
-      { "ru": "ПФ Стейк форель", "en": "Trout steak", "amount": "120" },
-      { "ru": "ПФ Фасоль", "en": "Beans", "amount": "60" },
-      { "ru": "ПФ Брокколи", "en": "Broccoli", "amount": "40" },
-      { "ru": "ПФ Соус маракуйя", "en": "Passion fruit sauce", "amount": "50" },
-      { "ru": "Тимьян", "en": "Thyme", "amount": "1" },
-      { "ru": "Масло растительное", "en": "Vegetable oil", "amount": "5" },
-      { "ru": "ПФ Чесночное масло", "en": "PF Garlic oil", "amount": "3" },
-      { "ru": "Соль", "en": "Salt", "amount": "1" }
+      { "ru": "ПФ Стейк форель", "en": "Trout steak", "vi": "Cá hồi vân steak (sơ chế)", "amount": "120" },
+      { "ru": "ПФ Фасоль", "en": "Beans", "vi": "Đậu (sơ chế)", "amount": "60" },
+      { "ru": "ПФ Брокколи", "en": "Broccoli", "vi": "Bông cải xanh (sơ chế)", "amount": "40" },
+      { "ru": "ПФ Соус маракуйя", "en": "Passion fruit sauce", "vi": "Sốt chanh dây (sơ chế)", "amount": "50" },
+      { "ru": "Тимьян", "en": "Thyme", "vi": "Cỏ xạ hương", "amount": "1" },
+      { "ru": "Масло растительное", "en": "Vegetable oil", "vi": "Dầu thực vật", "amount": "5" },
+      { "ru": "ПФ Чесночное масло", "en": "PF Garlic oil", "vi": "Dầu tỏi (sơ chế)", "amount": "3" },
+      { "ru": "Соль", "en": "Salt", "vi": "Muối", "amount": "1" }
     ],
     "process": {
-      "ru": "ПФ стейк форели и соус поместить в болитор (рыбу на 1-2 минуты). В кипящую воду поместить брокколи в сетке на 8 минут. После дать стечь воде.  Фасоль замороженую обжарить на разогретой сухой сковороде с добавлением масла и соли в конце. Извлечь форель из воды и пакета, очистить отбелка салфеткой. Обжарить на сковороде шкурой сверху, снять шкуру, перевернуть, обжарить с другой стороны. Выложить чуть сбоку от центра тарелки фасоль соломкой друг к другу. Наискосок в 45 градусов поверх стейк. В угол между Форелью и фасолью вылить соус. В противоположный угол выложить брокколи пучком. На рыбу положить тимьян.",
-      "en": "Place the trout steak and sauce in a bolitor (the fish should sit for 1-2 minutes). Place the broccoli in a mesh bag in boiling water for 8 minutes. Then drain. Fry the frozen beans in a hot dry frying pan, adding oil and salt at the end. Remove the trout from the water and bag, and clean the whites with a paper towel. Fry in a frying pan, skin side up, and remove the skin on, flip, and fry on the other side. Arrange the beans, julienned, slightly to the side of the plate, at a 45-degree angle, on top of the steak. Pour the sauce into the corner between the trout and the beans. Place a bunch of broccoli in the opposite corner. Sprinkle thyme on top of the fish."
+      "ru": "ПФ стейк форели и соус поместить в болитор...",
+      "en": "Place the trout steak and sauce in a bolitor...",
+      "vi": "Làm nóng steak cá hồi vân và sốt trong nước nóng 1–2 phút. Luộc bông cải xanh 8 phút rồi để ráo. Áp chảo đậu với dầu và muối. Lấy cá ra, thấm khô, áp chảo rồi lột da, trở mặt áp chảo tiếp. Xếp đậu, đặt cá chéo 45°, rưới sốt chanh dây và trang trí bông cải cùng cỏ xạ hương."
     },
     "photo": "photos/trout.png"
   },
   {
-    "name": { "ru": "Говядина с брокколи", "en": "Beef with Broccoli" },
+    "name": {
+      "ru": "Говядина с брокколи",
+      "en": "Beef with Broccoli",
+      "vi": "Bò xào bông cải"
+    },
     "ingredients": [
-      { "ru": "ПФ Говядина", "en": "Prep Beef", "amount": "125" },
-      { "ru": "ПФ Брокколи", "en": "Broccoli", "amount": "100" },
-      { "ru": "ПФ Соус на говядину", "en": "Beef Sauce", "amount": "50" },
-      { "ru": "Масло растительное", "en": "Vegetable oil", "amount": "5" },
-      { "ru": "Соль", "en": "Salt", "amount": "1" },
-      { "ru": "Перец черный молотый", "en": "Ground black pepper", "amount": "1" }
+      { "ru": "ПФ Говядина", "en": "Prep Beef", "vi": "Thịt bò (sơ chế)", "amount": "125" },
+      { "ru": "ПФ Брокколи", "en": "Broccoli", "vi": "Bông cải xanh (sơ chế)", "amount": "100" },
+      { "ru": "ПФ Соус на говядину", "en": "Beef Sauce", "vi": "Sốt bò (sơ chế)", "amount": "50" },
+      { "ru": "Масло растительное", "en": "Vegetable oil", "vi": "Dầu thực vật", "amount": "5" },
+      { "ru": "Соль", "en": "Salt", "vi": "Muối", "amount": "1" },
+      { "ru": "Перец черный молотый", "en": "Ground black pepper", "vi": "Tiêu đen xay", "amount": "1" }
     ],
     "process": {
-      "ru": "ПФ говядину поместить в горячую воду для прогрева на 1-2 минуты. Брокколи поместить вариться в сетке на 8 минут. Достать говядину очистить салфеткой от белка и обжарить на хорошо разогретой сковороде с добавлением масла, перца и соли. Выложить в тарелку сбоку у борта брокколи, далее по борту говядину. Между брокколи и говядиной по борту выложить соус кнелей.  Украсить микрозеленью.",
-      "en": "Place the PF beef in hot water to warm up for 30-40 seconds. Place the broccoli in a net to cook for 8-10 minutes. Remove the beef, clean the protein with a napkin and fry in a well-heated frying pan with the addition of oil, pepper and salt. Place the broccoli on the side of the plate, then the beef along the side. Place the quenelles sauce between the broccoli and beef along the side. Decorate with microgreens."
+      "ru": "ПФ говядину поместить в горячую воду...",
+      "en": "Place the PF beef in hot water to warm up...",
+      "vi": "Làm nóng bò sơ chế trong nước nóng 1–2 phút. Luộc bông cải xanh 8 phút. Thấm khô bò, áp chảo với dầu, muối và tiêu. Xếp bông cải và bò dọc viền đĩa, cho sốt bò giữa hai thành phần. Trang trí rau mầm."
     },
     "photo": "photos/beef.png"
   },
   {
-    "name": { "ru": "Токпокки", "en": "Tteobokki" },
+    "name": {
+      "ru": "Токпокки",
+      "en": "Tteobokki",
+      "vi": "Tteokbokki"
+    },
     "ingredients": [
-      { "ru": "Токпокки", "en": "Tteokbokki", "amount": "200" },
-      { "ru": "ПФ кура", "en": "Prep chicken", "amount": "65" },
-      { "ru": "ПФ Перец болгарский", "en": "Prep bell pepper", "amount": "50" },
-      { "ru": "ПФ Фасоль", "en": "Prep beans", "amount": "70" },
-      { "ru": "Масло растительное", "en": "Vegetable oil", "amount": "10" },
-      { "ru": "Сливки", "en": "Cream", "amount": "60" },
-      { "ru": "Перечный соус", "en": "Pepper sauce", "amount": "20" },
-      { "ru": "Микрозелень", "en": "Microgreens", "amount": "" }
+      { "ru": "Токпокки", "en": "Tteokbokki", "vi": "Bánh gạo Tteokbokki", "amount": "200" },
+      { "ru": "ПФ кура", "en": "Prep chicken", "vi": "Gà (sơ chế)", "amount": "65" },
+      { "ru": "ПФ Перец болгарский", "en": "Prep bell pepper", "vi": "Ớt chuông (sơ chế)", "amount": "50" },
+      { "ru": "ПФ Фасоль", "en": "Prep beans", "vi": "Đậu (sơ chế)", "amount": "70" },
+      { "ru": "Масло растительное", "en": "Vegetable oil", "vi": "Dầu thực vật", "amount": "10" },
+      { "ru": "Сливки", "en": "Cream", "vi": "Kem tươi", "amount": "60" },
+      { "ru": "Перечный соус", "en": "Pepper sauce", "vi": "Sốt ớt", "amount": "20" },
+      { "ru": "Микрозелень", "en": "Microgreens", "vi": "Rau mầm", "amount": "" }
     ],
     "process": {
-      "ru": "Нарезать мелкой соломкой перец и курицу. В сковороду налить масло, поместить фасоль, обжарить до размороженного состояния. Добавить перец, перечный соус и сливки. Ввести курицу. Токпокки отварить 2-3 минуты и добавить в сковороду. Перемешать и выложить на тарелку. Украсить микрозеленью.",
-      "en": "Cut pepper and chicken into thin strips. Pour oil into pan, place beans, fry until defrosted. Add pepper, pepper sauce, and cream. Add chicken. Boil tteokbokki 2-3 minutes and add to the pan. Mix and place on plate. Decorate with microgreens."
+      "ru": "Нарезать мелкой соломкой перец и курицу...",
+      "en": "Cut pepper and chicken into thin strips...",
+      "vi": "Cắt ớt chuông và gà sợi nhỏ. Đun nóng dầu, xào đậu đến khi rã đông. Thêm ớt, sốt ớt và kem, sau đó cho gà vào. Luộc bánh gạo 2–3 phút rồi cho vào chảo, trộn đều. Trình bày ra đĩa và trang trí rau mầm."
     },
     "photo": "photos/tobbokki.png"
   }
