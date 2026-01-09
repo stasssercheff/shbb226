@@ -2,8 +2,9 @@
 // *** ВАЖНО: этот файл НЕ объявляет `let translations` глобально, чтобы не конфликтовать с lang.js ***
 
 // === Навигация ===
-window.goHome = function () {
-  window.location.href = "https://stasssercheff.github.io/shbb125/";
+function goHome() {
+  // Переходим в корень сайта
+  location.href = location.origin + location.pathname.split('/')[1] + '/';
 };
 
 window.goBack = function () {
