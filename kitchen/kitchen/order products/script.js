@@ -1,6 +1,7 @@
 // === Навигация ===
 function goHome() {
-  location.href = "http://stasssercheff.github.io/shbb226/";
+  // Переходим в корень сайта
+  location.href = location.origin + location.pathname.split('/')[1] + '/';
 }
 
 function goBack() {
