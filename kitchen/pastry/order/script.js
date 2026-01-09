@@ -4,8 +4,8 @@ function goBack() {
 }
 
 function goHome() {
-  // 🏠 Переход на главную
-  window.location.href = "https://stasssercheff.github.io/shbb125/";
+  // Переходим в корень сайта
+  location.href = location.origin + location.pathname.split('/')[1] + '/';
 }
 
 
