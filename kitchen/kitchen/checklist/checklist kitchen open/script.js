@@ -3,8 +3,7 @@ let translations = {}; // словарь для i18n
 
 // === Навигация ===
 function goHome() {
-  // Переходим в корень сайта
-  location.href = location.origin + location.pathname.split('/')[1] + '/';
+  location.href = location.origin + '/' + location.pathname.split('/')[1] + '/';
 }
 
 function goBack() {
