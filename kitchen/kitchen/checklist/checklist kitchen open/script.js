@@ -3,7 +3,8 @@ let translations = {}; // словарь для i18n
 
 // === Навигация ===
 function goHome() {
-  location.href = "http://stasssercheff.github.io/shbb125/";
+  // Переходим в корень сайта
+  location.href = location.origin + location.pathname.split('/')[1] + '/';
 }
 
 function goBack() {
