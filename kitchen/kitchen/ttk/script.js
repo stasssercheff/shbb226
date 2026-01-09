@@ -9,8 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // ==== Навигация ====
 // На главную
 function goHome() {
-  // Переходим в корень сайта
-  location.href = location.origin + location.pathname.split('/')[1] + '/';
+  location.href = location.origin + '/' + location.pathname.split('/')[1] + '/';
 }
 
 // На уровень выше (одну папку вверх)
