@@ -1,4 +1,4 @@
-// ================== ТЕКУЩИЙ ЯЗЫК ==================
+// ================== ЯЗЫК ==================
 window.currentLang = window.currentLang || 'ru';
 
 // ================== НАВИГАЦИЯ ==================
@@ -17,24 +17,19 @@ function goBack() {
 const DATA_FILE = 'data/preps.json';
 
 // ================== LOAD JSON ==================
-function loadData() {
-  return fetch(DATA_FILE)
-    .then(r => r.json())
-    .catch(e => {
-      console.error('Preps load error:', e);
-      return null;
-    });
+async function loadData() {
+  const r = await fetch(DATA_FILE);
+  return r.json();
 }
 
-// ================== INGREDIENT NAME ==================
-function getIngredientName(ing) {
+// ================== HELPERS ==================
+function ingredientName(ing) {
   if (window.currentLang === 'ru') return ing['Продукт'];
   if (window.currentLang === 'vi') return ing['Ingredient_vi'] || ing['Ingredient'] || ing['Продукт'];
   return ing['Ingredient'] || ing['Продукт'];
 }
 
-// ================== TABLE HEADERS ==================
-function getHeaders() {
+function headers() {
   if (window.currentLang === 'ru') return ['#', 'Продукт', 'Гр/шт', 'Описание'];
   if (window.currentLang === 'vi') return ['#', 'Nguyên liệu', 'Gr/Pcs', 'Cách làm'];
   return ['#', 'Ingredient', 'Gr/Pcs', 'Process'];
@@ -43,59 +38,52 @@ function getHeaders() {
 // ================== RENDER ==================
 async function renderPage() {
   const data = await loadData();
-  if (!data) return;
-
   const container = document.querySelector('.table-container');
-  if (!container) return;
   container.innerHTML = '';
 
   (data.recipes || data).forEach(dish => {
     const card = document.createElement('div');
     card.className = 'dish-card';
 
-    // ---------- TITLE ----------
+    // TITLE
     const title = document.createElement('div');
     title.className = 'dish-title';
     title.textContent =
       dish.name?.[window.currentLang] ||
       dish.name?.ru ||
+      dish.title ||
       '';
     card.appendChild(title);
 
-    // ---------- TABLE ----------
+    // TABLE
     const table = document.createElement('table');
     table.className = 'pf-table';
 
     const thead = document.createElement('thead');
-    const tbody = document.createElement('tbody');
-
-    // ---------- HEAD ----------
-    const trHead = document.createElement('tr');
-    getHeaders().forEach(h => {
+    const trh = document.createElement('tr');
+    headers().forEach(h => {
       const th = document.createElement('th');
       th.textContent = h;
-      trHead.appendChild(th);
+      trh.appendChild(th);
     });
-    thead.appendChild(trHead);
+    thead.appendChild(trh);
 
-    // ---------- ROWS ----------
+    const tbody = document.createElement('tbody');
+
     dish.ingredients.forEach((ing, i) => {
       const tr = document.createElement('tr');
 
-      // #
-      const tdNum = document.createElement('td');
-      tdNum.textContent = i + 1;
+      const tdN = document.createElement('td');
+      tdN.textContent = i + 1;
 
-      // NAME
       const tdName = document.createElement('td');
-      tdName.textContent = getIngredientName(ing);
+      tdName.textContent = ingredientName(ing);
 
-      // AMOUNT
       const tdAmount = document.createElement('td');
       tdAmount.textContent = ing['Шт/гр'];
       tdAmount.dataset.base = ing['Шт/гр'];
 
-      // ---------- KEY INGREDIENT ----------
+      // === ПЕРЕСЧЁТ ===
       if (ing['Продукт'] === dish.key) {
         tdAmount.contentEditable = true;
         tdAmount.classList.add('key-ingredient');
@@ -108,23 +96,14 @@ async function renderPage() {
           tbody.querySelectorAll('tr').forEach(r => {
             const cell = r.cells[2];
             if (!cell || cell === tdAmount) return;
-
             const base = parseFloat(cell.dataset.base.replace(',', '.')) || 0;
-            const value = base * factor;
-            cell.textContent = Number.isInteger(value) ? value : value.toFixed(1);
+            cell.textContent = Math.round(base * factor);
           });
-        });
-
-        tdAmount.addEventListener('keydown', e => {
-          if (!/[0-9.,]|Backspace|Delete|ArrowLeft|ArrowRight/.test(e.key)) {
-            e.preventDefault();
-          }
         });
       }
 
-      tr.append(tdNum, tdName, tdAmount);
+      tr.append(tdN, tdName, tdAmount);
 
-      // ---------- DESCRIPTION ----------
       if (i === 0) {
         const tdDesc = document.createElement('td');
         tdDesc.rowSpan = dish.ingredients.length;
@@ -145,15 +124,9 @@ async function renderPage() {
 }
 
 // ================== INIT ==================
-document.addEventListener('DOMContentLoaded', () => {
-  renderPage();
+document.addEventListener('DOMContentLoaded', renderPage);
 
-  // 🔴 ХУК В ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА
-  if (typeof window.updateI18nText === 'function') {
-    const original = window.updateI18nText;
-    window.updateI18nText = function () {
-      original();
-      renderPage(); // ← ПЕРЕРИСОВКА ТАБЛИЦ
-    };
-  }
+// ================== LANGUAGE CHANGE ==================
+document.addEventListener('languageChanged', () => {
+  renderPage();
 });
