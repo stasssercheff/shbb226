@@ -1,141 +1,117 @@
-// ==== Текущий язык из lang.js ====
-window.currentLang = window.currentLang || 'ru';
+// ================== ЯЗЫК ==================
+function getLang() {
+  return localStorage.getItem("lang") || "ru";
+}
 
-// ==== Навигация ====
+// ================== НАВИГАЦИЯ ==================
 function goHome() {
-  location.href = location.origin + '/' + location.pathname.split('/')[1] + '/';
+  location.href = location.origin + "/" + location.pathname.split("/")[1] + "/";
 }
 
 function goBack() {
-  const currentPath = window.location.pathname;
-  const parentPath = currentPath.substring(0, currentPath.lastIndexOf("/"));
-  const upperPath = parentPath.substring(0, parentPath.lastIndexOf("/"));
-  window.location.href = upperPath + "/index.html";
+  const path = location.pathname;
+  const parent = path.substring(0, path.lastIndexOf("/"));
+  const upper = parent.substring(0, parent.lastIndexOf("/"));
+  location.href = upper + "/index.html";
 }
 
-// ==== Пути к данным ====
-const dataFiles = {
-  'Preps': 'data/preps.json',
-  'Sous-Vide': 'data/sv.json'
-};
+// ================== DATA ==================
+const DATA_FILE = "data/preps.json";
+let cachedData = null;
 
-// ==== Загрузка JSON ====
-function loadData(sectionName, callback) {
-  const relativePath = dataFiles[sectionName];
-
-  const baseUrl = window.location.origin + window.location.pathname;
-  const currentFolder = baseUrl.substring(0, baseUrl.lastIndexOf("/") + 1);
-  const fullPath = new URL(relativePath, currentFolder).href;
-
-  console.log('=== loadData ===');
-  console.log('sectionName:', sectionName);
-  console.log('relativePath:', relativePath);
-  console.log('fullPath:', fullPath);
-
-  fetch(fullPath)
-    .then(res => {
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      return res.json();
-    })
-    .then(data => callback(data))
-    .catch(err => console.error(`Ошибка загрузки ${sectionName}:`, err));
-}
-
-// ==== Отображение секции ====
-function renderSection(sectionName, toggle = true) {
-  const container = document.querySelector('.table-container');
-  const btn = document.querySelector(`.section-btn[data-section="${sectionName}"]`);
-
-  document.querySelectorAll('.section-btn').forEach(b => b.classList.remove('active'));
-
-  if (toggle && container.dataset.active === sectionName) {
-    container.innerHTML = '';
-    container.dataset.active = '';
+// ================== LOAD JSON ==================
+function loadData() {
+  if (cachedData) {
+    renderPreps(cachedData);
     return;
   }
 
-  btn.classList.add('active');
-  container.dataset.active = sectionName;
-
-  loadData(sectionName, data => {
-    if (sectionName === 'Preps') createTable(data);
-    else if (sectionName === 'Sous-Vide') renderSousVide(data);
-  });
+  fetch(DATA_FILE)
+    .then(r => r.json())
+    .then(data => {
+      cachedData = data;
+      renderPreps(data);
+    })
+    .catch(err => console.error("JSON load error:", err));
 }
 
-// ==== Таблица Preps ====
-function createTable(data) {
-  const container = document.querySelector('.table-container');
-  container.innerHTML = '';
+// ================== RENDER ==================
+function renderPreps(data) {
+  const lang = getLang();
+  const container = document.querySelector(".table-container");
+  if (!container) return;
 
-  (data.recipes || data).forEach(dish => {
-    const card = document.createElement('div');
-    card.className = 'dish-card';
+  container.innerHTML = "";
 
-    // Название блюда
-    const title = document.createElement('div');
-    title.className = 'dish-title';
-    title.textContent = dish.name?.[currentLang] || dish.name?.ru || dish.title;
+  (data.recipes || []).forEach(dish => {
+    const card = document.createElement("div");
+    card.className = "dish-card";
+
+    // ---- TITLE ----
+    const title = document.createElement("div");
+    title.className = "dish-title";
+    title.textContent = dish.name?.[lang] || dish.name?.ru || "";
     card.appendChild(title);
 
-    const table = document.createElement('table');
-    table.className = 'pf-table';
+    // ---- TABLE ----
+    const table = document.createElement("table");
+    table.className = "pf-table";
 
-    const thead = document.createElement('thead');
-    const tbody = document.createElement('tbody');
+    const thead = document.createElement("thead");
+    const tbody = document.createElement("tbody");
 
-    const headers = currentLang === 'ru'
-      ? ['#', 'Продукт', 'Гр/шт', 'Описание']
-      : currentLang === 'vi'
-        ? ['#', 'Nguyên liệu', 'Gr/Pcs', 'Cách làm']
-        : ['#', 'Ingredient', 'Gr/Pcs', 'Process'];
+    const headers =
+      lang === "ru"
+        ? ["#", "Продукт", "Гр/шт", "Описание"]
+        : lang === "vi"
+          ? ["#", "Nguyên liệu", "Gr/Pcs", "Mô tả"]
+          : ["#", "Ingredient", "Gr/Pcs", "Process"];
 
-    const trHead = document.createElement('tr');
+    const trh = document.createElement("tr");
     headers.forEach(h => {
-      const th = document.createElement('th');
+      const th = document.createElement("th");
       th.textContent = h;
-      trHead.appendChild(th);
+      trh.appendChild(th);
     });
-    thead.appendChild(trHead);
+    thead.appendChild(trh);
 
+    // ---- ROWS ----
     dish.ingredients.forEach((ing, i) => {
-      const tr = document.createElement('tr');
+      const tr = document.createElement("tr");
 
-      const tdNum = document.createElement('td');
-      tdNum.textContent = i + 1;
+      // №
+      const tdNum = document.createElement("td");
+      tdNum.textContent = ing["№"] ?? i + 1;
 
-      const tdName = document.createElement('td');
-      tdName.textContent = currentLang === 'ru'
-        ? ing['Продукт']
-        : currentLang === 'vi'
-          ? ing['Ingredient_vi'] || ing['Ingredient'] || ing['Продукт']
-          : ing['Ingredient'] || ing['Продукт'];
+      // NAME
+      const tdName = document.createElement("td");
+      tdName.textContent =
+        lang === "ru"
+          ? ing["Продукт"]
+          : ing["Ingredient"] || ing["Продукт"];
 
-      const tdAmount = document.createElement('td');
-      tdAmount.textContent = ing['Шт/гр'];
-      tdAmount.dataset.base = ing['Шт/гр'];
+      // AMOUNT
+      const tdAmount = document.createElement("td");
+      tdAmount.textContent = ing["Шт/гр"];
+      tdAmount.dataset.base = ing["Шт/гр"];
 
-      if (ing['Продукт'] === dish.key) {
+      // ==== KEY INGREDIENT ====
+      if (ing["Продукт"] === dish.key) {
         tdAmount.contentEditable = true;
-        tdAmount.classList.add('key-ingredient');
+        tdAmount.classList.add("key-ingredient");
 
-        tdAmount.addEventListener('input', () => {
-          let newVal = parseFloat(tdAmount.textContent.replace(/[^0-9.]/g, '')) || 0;
-          if (parseFloat(tdAmount.dataset.base) === 0) tdAmount.dataset.base = 1;
-          const factor = newVal / parseFloat(tdAmount.dataset.base);
+        tdAmount.addEventListener("input", () => {
+          const newVal = parseFloat(tdAmount.textContent) || 0;
+          const baseVal = parseFloat(tdAmount.dataset.base) || 1;
+          const factor = newVal / baseVal;
 
-          const rows = tdAmount.closest('table').querySelectorAll('tbody tr');
-          rows.forEach(r => {
-            const cell = r.cells[2];
+          tbody.querySelectorAll("tr").forEach(r => {
+            const cell = r.children[2];
             if (cell && cell !== tdAmount) {
               const base = parseFloat(cell.dataset.base) || 0;
               cell.textContent = Math.round(base * factor);
             }
           });
-        });
-
-        tdAmount.addEventListener('keydown', e => {
-          if (!/[0-9]|Backspace|Delete|ArrowLeft|ArrowRight/.test(e.key)) e.preventDefault();
         });
       }
 
@@ -143,9 +119,10 @@ function createTable(data) {
       tr.appendChild(tdName);
       tr.appendChild(tdAmount);
 
+      // DESCRIPTION
       if (i === 0) {
-        const tdDesc = document.createElement('td');
-        tdDesc.textContent = dish.process?.[currentLang] || dish.process?.ru || '';
+        const tdDesc = document.createElement("td");
+        tdDesc.textContent = dish.process?.[lang] || dish.process?.ru || "";
         tdDesc.rowSpan = dish.ingredients.length;
         tr.appendChild(tdDesc);
       }
@@ -160,69 +137,10 @@ function createTable(data) {
   });
 }
 
-// ==== Таблица Sous-Vide ====
-function renderSousVide(data) {
-  const container = document.querySelector('.table-container');
-  container.innerHTML = '';
+// ================== INIT ==================
+document.addEventListener("DOMContentLoaded", loadData);
 
-  data.recipes.forEach(dish => {
-    const card = document.createElement('div');
-    card.className = 'dish-card';
-
-    const title = document.createElement('div');
-    title.className = 'dish-title';
-    title.textContent = dish.name?.[currentLang] || dish.name?.ru || dish.title;
-    card.appendChild(title);
-
-    const table = document.createElement('table');
-    table.className = 'sv-table';
-
-    const thead = document.createElement('thead');
-    const tbody = document.createElement('tbody');
-
-    const headers = currentLang === 'ru'
-      ? ['#', 'Продукт', 'Гр/шт', 'Темп °C', 'Время', 'Описание']
-      : currentLang === 'vi'
-        ? ['#', 'Nguyên liệu', 'Gr/Pcs', 'Temp °C', 'Time', 'Cách làm']
-        : ['#', 'Ingredient', 'Gr/Pcs', 'Temp °C', 'Time', 'Process'];
-
-    const trHead = document.createElement('tr');
-    headers.forEach(h => {
-      const th = document.createElement('th');
-      th.textContent = h;
-      trHead.appendChild(th);
-    });
-    thead.appendChild(trHead);
-
-    dish.ingredients.forEach((ing, i) => {
-      const tdDesc = (dish.process.find(p => i + 1 >= p.range[0] && i + 1 <= p.range[1])?.[currentLang])
-        || (dish.process.find(p => i + 1 >= p.range[0] && i + 1 <= p.range[1])?.ru)
-        || '';
-
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td>${ing['№']}</td>
-        <td>${currentLang === 'ru' ? ing['Продукт'] : currentLang === 'vi' ? ing['Ingredient_vi'] || ing['Ingredient'] || ing['Продукт'] : ing['Ingredient'] || ing['Продукт']}</td>
-        <td>${ing['Шт/гр']}</td>
-        <td>${ing['Температура С / Temperature C'] || ''}</td>
-        <td>${ing['Время мин / Time'] || ''}</td>
-        <td>${tdDesc}</td>
-      `;
-      tbody.appendChild(tr);
-    });
-
-    table.appendChild(thead);
-    table.appendChild(tbody);
-    card.appendChild(table);
-    container.appendChild(card);
-  });
-}
-
-// ==== Инициализация ====
-document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll('.section-btn').forEach(btn => {
-    btn.addEventListener('click', () => renderSection(btn.dataset.section));
-  });
-
-  if (typeof updateI18nText === "function") updateI18nText();
+// ================== LANGUAGE CHANGE ==================
+document.addEventListener("languageChanged", () => {
+  if (cachedData) renderPreps(cachedData);
 });
