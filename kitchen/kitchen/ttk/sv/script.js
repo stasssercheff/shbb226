@@ -22,7 +22,7 @@ let cachedData = null;
 // ================== LOAD JSON ==================
 function loadData() {
   if (cachedData) {
-    renderSousVide(cachedData);
+    renderSV(cachedData);
     return;
   }
 
@@ -30,13 +30,13 @@ function loadData() {
     .then(r => r.json())
     .then(data => {
       cachedData = data;
-      renderSousVide(data);
+      renderSV(data);
     })
-    .catch(err => console.error("Sous-Vide load error:", err));
+    .catch(err => console.error("SV JSON load error:", err));
 }
 
-// ================== RENDER ==================
-function renderSousVide(data) {
+// ================== RENDER SOUS-VIDE ==================
+function renderSV(data) {
   const lang = getLang();
   const container = document.querySelector(".table-container");
   if (!container) return;
@@ -47,17 +47,16 @@ function renderSousVide(data) {
     const card = document.createElement("div");
     card.className = "dish-card";
 
-    // ---- TITLE ----
+    // ---------- TITLE ----------
     const title = document.createElement("div");
     title.className = "dish-title";
     title.textContent =
-      dish.name?.[lang] ||
-      dish.name?.ru ||
-      dish.title ||
+      dish.title?.[lang] ||
+      dish.title?.ru ||
       "";
     card.appendChild(title);
 
-    // ---- TABLE ----
+    // ---------- TABLE ----------
     const table = document.createElement("table");
     table.className = "sv-table";
 
@@ -79,7 +78,7 @@ function renderSousVide(data) {
     });
     thead.appendChild(trh);
 
-    // ---- ROWS ----
+    // ---------- ROWS ----------
     dish.ingredients.forEach((ing, i) => {
       const tr = document.createElement("tr");
 
@@ -87,19 +86,12 @@ function renderSousVide(data) {
       const tdNum = document.createElement("td");
       tdNum.textContent = ing["№"] ?? i + 1;
 
-      // NAME (RU / EN / VI)
+      // NAME (объект!)
       const tdName = document.createElement("td");
-      if (lang === "ru") {
-        tdName.textContent = ing["Продукт"] || "";
-      } else if (lang === "vi") {
-        tdName.textContent =
-          ing["Ingredient_vi"] ||
-          ing["Ingredient"] ||
-          ing["Продукт"] ||
-          "";
-      } else {
-        tdName.textContent = ing["Ingredient"] || ing["Продукт"] || "";
-      }
+      tdName.textContent =
+        ing["Продукт"]?.[lang] ||
+        ing["Продукт"]?.ru ||
+        "";
 
       // AMOUNT
       const tdAmount = document.createElement("td");
@@ -113,16 +105,24 @@ function renderSousVide(data) {
       const tdTime = document.createElement("td");
       tdTime.textContent = ing["Время мин / Time"] || "";
 
-      // DESCRIPTION (по диапазону)
+      // DESCRIPTION (по range)
+      const proc = dish.process?.find(
+        p => i + 1 >= p.range[0] && i + 1 <= p.range[1]
+      );
+
       const tdDesc = document.createElement("td");
-      const proc =
-        dish.process?.find(p => i + 1 >= p.range[0] && i + 1 <= p.range[1]);
       tdDesc.textContent =
         proc?.[lang] ||
         proc?.ru ||
         "";
 
-      tr.append(tdNum, tdName, tdAmount, tdTemp, tdTime, tdDesc);
+      tr.appendChild(tdNum);
+      tr.appendChild(tdName);
+      tr.appendChild(tdAmount);
+      tr.appendChild(tdTemp);
+      tr.appendChild(tdTime);
+      tr.appendChild(tdDesc);
+
       tbody.appendChild(tr);
     });
 
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.addEventListener("click", () => {
       setTimeout(() => {
-        if (cachedData) renderSousVide(cachedData);
+        if (cachedData) renderSV(cachedData);
       }, 0);
     });
   });
