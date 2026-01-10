@@ -83,12 +83,16 @@ function renderPreps(data) {
       const tdNum = document.createElement("td");
       tdNum.textContent = ing["№"] ?? i + 1;
 
-      // NAME
-      const tdName = document.createElement("td");
-      tdName.textContent =
-        lang === "ru"
-          ? ing["Продукт"]
-          : ing["Ingredient"] || ing["Продукт"];
+      // NAME (RU / EN / VI)
+const tdName = document.createElement("td");
+
+if (lang === "ru") {
+  tdName.textContent = ing["Продукт"] || "";
+} else if (lang === "vi") {
+  tdName.textContent = ing["Ingredient_vi"] || ing["Ingredient"] || ing["Продукт"] || "";
+} else {
+  tdName.textContent = ing["Ingredient"] || ing["Продукт"] || "";
+}
 
       // AMOUNT
       const tdAmount = document.createElement("td");
