@@ -43,7 +43,9 @@ function renderPreps(data) {
 
   container.innerHTML = "";
 
-  (data.recipes || []).forEach(dish => {
+  (data.recipes || [])
+  .filter(dish => dish.enabled !== false)
+  .forEach(dish => {
     const card = document.createElement("div");
     card.className = "dish-card";
 
