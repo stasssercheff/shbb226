@@ -1,1 +1,190 @@
-111
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="checklist1"></title>
+
+  <!-- ✅ Подключаем общий CSS -->
+  <link rel="stylesheet" href="../../../../common.css">
+  <!-- ✅ Локальный CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <script src="../../../../lang.js" defer></script>
+  <!-- ✅ Глобальные настройки языков отправки -->
+  <script src="../../../../sendConfig.js" defer></script>
+
+</head>
+<body data-profile="chef">
+
+<header class="page-header">
+  <div class="lang-switch">
+    <button class="lang-btn" data-lang="ru">RU</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="vi">VI</button>
+  </div>
+<div class="nav-buttons">
+      <button class="nav-btn" data-i18n="home" onclick="goHome()"></button>
+      <button class="nav-btn" data-i18n="back" onclick="goBack()"></button>
+    </div>
+</header>
+
+<main class="main-container">
+  <h1 data-i18n="stop_list"></h1>
+  <div class="date-container">
+    <span id="current-date"></span>
+  </div>
+
+
+<div class="dish">
+    <label for="employeeSelect" data-i18n="name"></label>
+    <select id="employeeSelect" name="chef" class="qty">
+      <option value="-" selected>-</option>
+      <option value="maksim" data-i18n="maksim"></option>
+      <option value="vadim" data-i18n="vadim"></option>
+    <option value="denis" data-i18n="denis"></option>
+      <option value="stas" data-i18n="stas"></option>
+    </select>
+  </div> 
+
+<!-- Действие -->
+
+  
+<div id="stop_list">
+  <!-- Генерация из JSON ключей -->
+  <div class="checklist-item">
+  <label for="croque_madame_mozzarella" data-i18n="croque_madame_mozzarella"></label>
+  <input type="checkbox" id="croque_madame_mozzarella">
+</div>
+
+<div class="checklist-item">
+  <label for="pancakes_seasonal_fruits" data-i18n="pancakes_seasonal_fruits"></label>
+  <input type="checkbox" id="pancakes_seasonal_fruits">
+</div>
+
+<div class="checklist-item">
+  <label for="yogurt_bowl" data-i18n="yogurt_bowl"></label>
+  <input type="checkbox" id="yogurt_bowl">
+</div>
+
+<div class="checklist-item">
+  <label for="scrambled_eggs_salmon_rillettes" data-i18n="scrambled_eggs_salmon_rillettes"></label>
+  <input type="checkbox" id="scrambled_eggs_salmon_rillettes">
+</div>
+
+<div class="checklist-item">
+  <label for="eggs_benedict_trout" data-i18n="eggs_benedict_trout"></label>
+  <input type="checkbox" id="eggs_benedict_trout">
+</div>
+
+<div class="checklist-item">
+  <label for="syrniki" data-i18n="syrniki"></label>
+  <input type="checkbox" id="syrniki">
+</div>
+
+<div class="checklist-item">
+  <label for="fried_eggs_bacon" data-i18n="fried_eggs_bacon"></label>
+  <input type="checkbox" id="fried_eggs_bacon">
+</div>
+
+<div class="checklist-item">
+  <label for="fried_eggs_salmon" data-i18n="fried_eggs_salmon"></label>
+  <input type="checkbox" id="fried_eggs_salmon">
+</div>
+
+<div class="checklist-item">
+  <label for="friendship_porridge" data-i18n="friendship_porridge"></label>
+  <input type="checkbox" id="friendship_porrridge">
+</div>
+
+<div class="checklist-item">
+  <label for="avocado_toast" data-i18n="avocado_toast"></label>
+  <input type="checkbox" id="avocado_toast">
+</div>
+
+<div class="checklist-item">
+  <label for="vegetable_salad" data-i18n="vegetable_salad"></label>
+  <input type="checkbox" id="vegetable_salad">
+</div>
+
+<div class="checklist-item">
+  <label for="warm_liver_salad" data-i18n="warm_liver_salad"></label>
+  <input type="checkbox" id="warm_liver_salad">
+</div>
+
+<div class="checklist-item">
+  <label for="beef_tartare" data-i18n="beef_tartare"></label>
+  <input type="checkbox" id="beef_tartare">
+</div>
+
+<div class="checklist-item">
+  <label for="shrimp_salad" data-i18n="shrimp_salad"></label>
+  <input type="checkbox" id="shrimp_salad">
+</div>
+
+<div class="checklist-item">
+  <label for="octopus_salad" data-i18n="octopus_salad"></label>
+  <input type="checkbox" id="octopus_salad">
+</div>
+
+<div class="checklist-item">
+  <label for="baked_camembert" data-i18n="baked_camembert"></label>
+  <input type="checkbox" id="baked_camembert">
+</div>
+
+<div class="checklist-item">
+  <label for="pumpkin_cream_soup" data-i18n="pumpkin_cream_soup"></label>
+  <input type="checkbox" id="pumpkin_cream_soup">
+</div>
+
+<div class="checklist-item">
+  <label for="broccoli_cream_soup" data-i18n="broccoli_cream_soup"></label>
+  <input type="checkbox" id="broccoli_cream_soup">
+</div>
+
+<div class="checklist-item">
+  <label for="pasta_shrimp_bisque" data-i18n="pasta_shrimp_bisque"></label>
+  <input type="checkbox" id="pasta_shrimp_bisque">
+</div>
+
+<div class="checklist-item">
+  <label for="pasta_duck_gorgonzola" data-i18n="pasta_duck_gorgonzola"></label>
+  <input type="checkbox" id="pasta_duck_gorgonzola">
+</div>
+
+<div class="checklist-item">
+  <label for="grilled_chicken_breast" data-i18n="grilled_chicken_breast"></label>
+  <input type="checkbox" id="grilled_chicken_breast">
+</div>
+
+<div class="checklist-item">
+  <label for="trout_steak" data-i18n="trout_steak"></label>
+  <input type="checkbox" id="trout_steak">
+</div>
+
+<div class="checklist-item">
+  <label for="beef_sous_vide_broccoli" data-i18n="beef_sous_vide_broccoli"></label>
+  <input type="checkbox" id="beef_sous_vide_broccoli">
+</div>
+
+<div class="checklist-item">
+  <label for="tteokbokki_chicken" data-i18n="tteokbokki_chicken"></label>
+  <input type="checkbox" id="tteokbokki_chicken">
+</div>
+</div>
+  
+  <div class="dish">
+      <label class="check-label" data-i18n="comment"></label>
+      <textarea class="comment" rows="3" placeholder="..."></textarea>
+    </div>
+  </div>
+
+  <button id="sendBtn" data-i18n="btn_send"></button>
+  <div id="result"></div>
+</main>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>
