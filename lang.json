@@ -9,6 +9,11 @@
     "en": "Preps",
     "vi": "Chuẩn bị"
   },
+  "change": {
+  "ru": "Изменение",
+  "en": "Change",
+  "vi": "Thay đổi"
+},
 
 "stop_list": {
   "ru": "Стоп-лист",
