@@ -9,6 +9,14 @@
     "en": "Preps",
     "vi": "Chuẩn bị"
   },
+
+"stop_list": {
+  "ru": "Стоп-лист",
+  "en": "Stop list",
+  "vi": "Danh sách tạm ngừng"
+},
+
+  
   "given": {
   "ru": "Отдано",
   "en": "Given",
