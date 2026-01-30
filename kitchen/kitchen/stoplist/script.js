@@ -1,6 +1,6 @@
 // === script.js ===
 document.addEventListener('DOMContentLoaded', () => {
-  const chat_id = '-1002393080811';
+  const chat_id = '-5025734210';
   const worker_url = 'https://shbb1.stassser.workers.dev/';
   const button = document.getElementById('sendBtn');
 
@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const headerDict = {
     title: { 
-      ru: "Чеклист", 
-      en: "Checklist", 
-      vi: "Danh sách kiểm" 
+     "ru": "Стоп-лист",
+     "en": "Stop list",
+     "vi": "Danh sách tạm ngừng"
     },
     date: { 
       ru: "Дата", 
