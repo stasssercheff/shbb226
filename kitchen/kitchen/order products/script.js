@@ -40,7 +40,6 @@ function switchLanguage(lang) {
     }
   });
 
-  // Обновляем опции select
   document.querySelectorAll("select").forEach(select => {
     Array.from(select.options).forEach(option => {
       const key = option.dataset.i18n;
@@ -84,13 +83,11 @@ function restoreFormData() {
 document.addEventListener("DOMContentLoaded", () => {
   const lang = localStorage.getItem("lang") || "ru";
 
-  // Пустая опция для select.qty
   document.querySelectorAll("select.qty").forEach(select => {
     const hasEmpty = Array.from(select.options).some(opt => opt.value === "");
     if (!hasEmpty) {
       const emptyOption = document.createElement("option");
       emptyOption.value = "";
-      emptyOption.dataset.i18n = "empty";
       emptyOption.textContent = "—";
       emptyOption.selected = true;
       select.insertBefore(emptyOption, select.firstChild);
@@ -127,18 +124,27 @@ document.addEventListener("DOMContentLoaded", () => {
       const title = translations[titleKey]?.[lang] || sectionTitle?.textContent || "";
 
       let sectionContent = "";
+
       const dishes = Array.from(section.querySelectorAll(".dish")).filter(dish => {
-  const select = dish.querySelector("select.qty");
-  return select && select.value;
-});
+        const select = dish.querySelector("select.qty");
+        return select && select.value && select.value !== "";
+      });
 
-dishes.forEach((dish, index) => {
-  const label = dish.querySelector("label");
-  const labelKey = label?.dataset.i18n;
-  const labelText = translations[labelKey]?.[lang] || label?.textContent || "—";
-  sectionContent += `${index + 1}. ${labelText}\n`;
-});
+      dishes.forEach((dish, index) => {
+        const select = dish.querySelector("select.qty");
+        const quantity = select.value;
 
+        const nameEl = dish.querySelector(".product-name");
+        const unitEl = dish.querySelector(".product-unit");
+
+        const nameKey = nameEl?.dataset.i18n;
+        const unitKey = unitEl?.dataset.i18n;
+
+        const nameText = translations[nameKey]?.[lang] || nameEl?.textContent || "";
+        const unitText = translations[unitKey]?.[lang] || unitEl?.textContent || "";
+
+        sectionContent += `${index + 1}. ${nameText} — ${quantity} ${unitText}\n`;
+      });
 
       const commentField = section.querySelector("textarea.comment");
       if (commentField && commentField.value.trim()) {
@@ -146,7 +152,7 @@ dishes.forEach((dish, index) => {
       }
 
       if (sectionContent.trim()) {
-       message += `${title}\n${sectionContent}\n`;
+        message += `${title}\n${sectionContent}\n`;
       }
     });
 
@@ -156,7 +162,7 @@ dishes.forEach((dish, index) => {
   // === Кнопка отправки ===
   const button = document.getElementById("sendToTelegram");
   button.addEventListener("click", async () => {
-    const chat_id = "-1002393080811"; // твой Telegram чат ID
+    const chat_id = "-1002393080811";
     const worker_url = "https://shbb1.stassser.workers.dev/";
     const accessKey = "14d92358-9b7a-4e16-b2a7-35e9ed71de43";
 
@@ -166,32 +172,11 @@ dishes.forEach((dish, index) => {
       body: JSON.stringify({ chat_id, text: msg })
     }).then(res => res.json());
 
-    const sendEmail = async msg => {
-      try {
-        const res = await fetch("https://api.web3forms.com/submit", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            access_key: accessKey,
-            subject: "ЗАКАЗ ПРОДУКТОВ",
-            from_name: "SHBB KITCHEN",
-            reply_to: "no-reply@shbb.com",
-            message: msg
-          })
-        }).then(r => r.json());
-
-        if (!res.success) alert("Ошибка отправки email. Проверьте форму.");
-      } catch (err) {
-        alert("Ошибка отправки email: " + err.message);
-      }
-    };
-
     const sendAllParts = async text => {
       let start = 0;
       while (start < text.length) {
         const chunk = text.slice(start, start + 4000);
         await sendMessage(chunk);
-       // await sendEmail(chunk); //
         start += 4000;
       }
     };
@@ -202,7 +187,6 @@ dishes.forEach((dish, index) => {
     };
 
     try {
-      // ✅ Используем языки из sendConfig.js
       for (const lang of window.sendLangs) {
         const msg = buildMessage(lang);
         await sendAllParts(msg);
