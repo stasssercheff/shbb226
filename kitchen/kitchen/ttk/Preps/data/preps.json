@@ -88,6 +88,26 @@
   }
     },
     {
+      "name": {
+    "ru": "СОУС ПЕСТО",
+    "en": "PESTO SAUCE",
+    "vi": "SỐT PESTO"
+  },
+  "key": "Базилик",
+  "enabled": true,
+  "ingredients": [
+    { "№": 1, "Продукт": "Базилик", "Ingredient": "Basil", "Ingredient_vi": "Húng tây", "Шт/гр": "100" },
+    { "№": 2, "Продукт": "Масло растительное", "Ingredient": "Vegetable oil", "Ingredient_vi": "Dầu thực vật", "Шт/гр": "500" },
+    { "№": 3, "Продукт": "Соль", "Ingredient": "Salt", "Ingredient_vi": "Muối", "Шт/гр": "10" },
+    { "№": 4, "Продукт": "Чеснок", "Ingredient": "Garlic", "Ingredient_vi": "Tỏi", "Шт/гр": "35" }
+  ],
+  "process": {
+    "ru": "Смешать все ингредиенты, перебить блендером до однородной консистенции.",
+    "en": "Mix all ingredients and blend with a hand blender until smooth.",
+    "vi": "Trộn tất cả các nguyên liệu và xay bằng máy xay cho đến khi hỗn hợp mịn."   
+  }
+    },
+    {
   "name": {
     "ru": "РИЕТ ИЗ ФОРЕЛИ",
     "en": "TROUT RIETT",
