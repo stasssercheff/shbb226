@@ -52,6 +52,11 @@
   "vi": "Đã cho"
 },
 
+  "preorder_period": {
+  "ru": "Заказывать заранее (за неделю)",
+  "en": "Order in advance (1 week)",
+  "vi": "Đặt trước (1 tuần)"
+}
   "breakfasts": {
     "ru": "Завтраки",
     "en": "Breakfasts",
