@@ -1381,12 +1381,30 @@
   "en": "Cucumber",
   "vi": "Dưa chuột"
 },
+
+"stone_potato_2days": {
+  "ru": "Картофель стоун (за 2 дня)",
+  "en": "Stone potato (2 days notice)",
+  "vi": "Khoai tây bi (đặt trước 2 ngày)"
+},
+"pumpkin_soup": {
+  "ru": "Тыква (суп)",
+  "en": "Pumpkin (soup)",
+  "vi": "Bí đỏ (súp)"
+},
+"broccoli_soup": {
+  "ru": "Брокколи (суп)",
+  "en": "Broccoli (soup)",
+  "vi": "Bông cải xanh (súp)"
+},
+
+  
 "bell_pepper": {
   "ru": "Перец болгарский",
   "en": "Bell pepper",
   "vi": "Ớt chuông"
 },
-"bell_pepper_ratatouille": {
+"bell_pepper_sauce": {
   "ru": "Перец болгарский(соус кура)",
   "en": "Bell pepper (chicken sauce)",
   "vi": "Ớt chuông (ga sauce)"
@@ -1415,6 +1433,12 @@
   "ru": "Цукини",
   "en": "Zucchini",
   "vi": "Bí ngòi"
+},
+
+"apple": {
+  "ru": "Яблоко",
+  "en": "Apple",
+  "vi": "Táo"
 },
 "cherry_dark": {
   "ru": "Черри темные",
