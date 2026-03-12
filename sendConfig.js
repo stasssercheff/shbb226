@@ -6,7 +6,7 @@ const sendProfiles = {
   rest: ["ru"],
   hall: ["en"],
   kitchen: ["ru", "vi"],
-  pastry: ["ru"],
+  pastry: ["ru", "en"],
   order: ["ru", "en", "vi"],
   extra2: ["ru"],
   extra3: ["ru"]
